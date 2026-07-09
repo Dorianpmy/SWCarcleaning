@@ -544,11 +544,87 @@
         .contact-icon svg { width: 36px; height: 36px; fill: currentColor; }
 
         /* FOOTER */
-        footer { background: var(--dark); color: #e2e8f0; padding: 60px 0 30px; }
-        .footer-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-bottom: 48px; }
-        .footer-col h3 { color: white; margin-bottom: 20px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-col a { display: block; margin-bottom: 12px; color: #cbd5e1; font-size: 14px; transition: var(--transition); }
-        .footer-col a:hover { color: var(--primary); padding-left: 5px; }
+        .question-strip {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+            padding: 0 0 72px;
+        }
+        .question-card {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+            padding: 30px;
+            border-radius: 22px;
+            background: #ffffff;
+            border: 1px solid rgba(0, 102, 255, 0.16);
+            box-shadow: 0 22px 55px rgba(0, 102, 255, 0.10);
+        }
+        .question-card span {
+            display: inline-flex;
+            width: fit-content;
+            margin-bottom: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(37, 211, 102, 0.10);
+            color: #0f8f43;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .question-card h2 {
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: clamp(26px, 3vw, 36px);
+        }
+        .question-card p {
+            color: var(--text-muted);
+            max-width: 660px;
+        }
+
+        footer { background: #080f1f; color: #d9e2ef; padding: 72px 0 30px; }
+        .footer-inner { display: grid; grid-template-columns: 1.25fr 0.9fr 1fr; gap: 64px; margin-bottom: 50px; }
+        .footer-brand { max-width: 420px; }
+        .footer-signature {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #ffffff;
+            font-family: "Brush Script MT", "Segoe Script", cursive;
+            font-size: clamp(40px, 5vw, 66px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0;
+            transform: rotate(-2deg);
+        }
+        .footer-brand p {
+            color: #94a3b8;
+            line-height: 1.75;
+            font-size: 15px;
+        }
+        .footer-col h3 { color: white; margin-bottom: 20px; font-size: 16px; font-weight: 800; }
+        .footer-col a { display: block; margin-bottom: 12px; color: #94a3b8; font-size: 14px; transition: var(--transition); }
+        .footer-col a:hover { color: #ffffff; padding-left: 5px; }
+        .footer-contact-link {
+            display: flex !important;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer-contact-link .footer-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(0, 102, 255, 0.15);
+            color: #62a3ff;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+        .footer-contact-link.whatsapp-contact .footer-icon {
+            background: rgba(37, 211, 102, 0.14);
+            color: var(--whatsapp);
+        }
         
         .social-links { display: flex; gap: 16px; margin-top: 16px; }
         .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; transition: var(--transition-slow); }
@@ -557,10 +633,10 @@
         .social-links a.social-fb:hover { background: var(--facebook); transform: translateY(-4px) scale(1.1); }
         .social-links svg { width: 22px; height: 22px; fill: currentColor; }
 
-        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; color: #94a3b8; }
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 14px; color: #64748b; }
         .legal-links { display: flex; gap: 16px; }
-        .legal-links button { background: none; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; transition: var(--transition); padding: 0; font-family: inherit; }
-        .legal-links button:hover { color: var(--primary); text-decoration: underline; }
+        .legal-links button { background: none; border: none; color: #64748b; font-size: 14px; cursor: pointer; transition: var(--transition); padding: 0; font-family: inherit; }
+        .legal-links button:hover { color: #ffffff; text-decoration: underline; }
 
         /* FLOATING WHATSAPP */
         .whatsapp-float {
@@ -602,8 +678,16 @@
             .offer-board, .finder-options { grid-template-columns: 1fr; }
             .formula-finder { padding: 22px; margin-top: 34px; }
             .offer-tile { min-height: 170px; }
-            .footer-inner { grid-template-columns: 1fr; }
+            .question-strip { padding-bottom: 52px; }
+            .question-card {
+                grid-template-columns: 1fr;
+                padding: 24px;
+                text-align: left;
+            }
+            .question-card .btn { width: 100%; }
+            .footer-inner { grid-template-columns: 1fr; gap: 36px; }
             .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .legal-links { flex-wrap: wrap; justify-content: center; }
             .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
             .whatsapp-float svg { width: 30px; height: 30px; }
             .hero p { text-align: center; font-size: 16px; line-height: 1.7; margin-bottom: 22px; color: #334155; }
@@ -931,20 +1015,25 @@
         </section>
     </main>
 
+    <section class="question-strip" aria-labelledby="question-title">
+        <div class="container">
+            <div class="question-card">
+                <div>
+                    <span>Une question ?</span>
+                    <h2 id="question-title">Besoin d'un conseil avant de réserver ?</h2>
+                    <p>Envoyez une photo de votre véhicule ou dites-nous ce dont vous avez besoin. On vous répond simplement avec la formule la plus adaptée.</p>
+                </div>
+                <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20j%27ai%20une%20question%20avant%20de%20réserver" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">Poser ma question</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <div class="footer-col">
-                    <h3>À propos</h3>
-                    <a href="#accueil">Accueil</a>
-                    <a href="#services">Services</a>
-                    <a href="#tarifs">Formules</a>
-                    <a href="abonnement.html">Abonnements</a>
-                    <a href="#contact">Contact</a>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Réseaux Sociaux</h3>
+                <div class="footer-brand">
+                    <div class="footer-signature" aria-label="Signature SW Carcleaning">SW Carcleaning</div>
+                    <p>Lavage automobile et detailing à domicile à Fribourg et alentours. Un service soigné, clair et flexible pour garder votre véhicule propre sans vous déplacer.</p>
                     <div class="social-links">
                         <a href="https://wa.me/41779043121" class="social-wa" target="_blank" aria-label="Nous contacter sur WhatsApp" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -959,10 +1048,20 @@
                 </div>
 
                 <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#tarifs">Formules</a>
+                    <a href="abonnement.html">Abonnements</a>
+                    <a href="#zone">Zone d'intervention</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
                     <h3>Contact</h3>
-                    <a href="tel:+41779043121">📱 +41 77 904 31 21</a>
-                    <a href="mailto:s.wcarcleaning7@gmail.com">📧 s.wcarcleaning7@gmail.com</a>
-                    <a href="https://www.google.com/maps/place/Fribourg" target="_blank" rel="noopener noreferrer">📍 Fribourg, CH</a>
+                    <a class="footer-contact-link whatsapp-contact" href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20renseignement" target="_blank" rel="noopener noreferrer"><span class="footer-icon">W</span> +41 77 904 31 21</a>
+                    <a class="footer-contact-link" href="mailto:s.wcarcleaning7@gmail.com"><span class="footer-icon">@</span> s.wcarcleaning7@gmail.com</a>
+                    <a class="footer-contact-link" href="https://www.google.com/maps/place/Fribourg" target="_blank" rel="noopener noreferrer"><span class="footer-icon">⌖</span> Fribourg, Suisse</a>
                 </div>
             </div>
 
@@ -1077,6 +1176,7 @@
             ['.feature-card', 'reveal reveal-scale'],
             ['.offer-tile', 'reveal reveal-scale'],
             ['.formula-finder', 'reveal reveal-scale'],
+            ['.question-card', 'reveal reveal-scale'],
             ['.contact-item', 'reveal reveal-scale'],
             ['.trust-item', 'reveal'],
             ['.zone-content', 'reveal reveal-left'],
