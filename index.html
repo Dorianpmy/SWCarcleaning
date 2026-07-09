@@ -232,6 +232,8 @@
         .feature-card.reveal,
         .proof-card.reveal,
         .price-card.reveal,
+        .offer-tile.reveal,
+        .formula-finder.reveal,
         .contact-item.reveal {
             transition-property: opacity, transform, box-shadow, border-color, background;
         }
@@ -302,6 +304,139 @@
         .price-list li:last-child { border-bottom: none; }
         .price-list li:before { content: '✓'; color: var(--primary); font-weight: 800; font-size: 16px; flex-shrink: 0; }
         .price-card.disabled .price-list li:before { color: var(--text-muted); }
+
+        .offer-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 32px;
+        }
+        .offer-tile {
+            min-height: 190px;
+            padding: 24px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            background: linear-gradient(135deg, rgba(10, 17, 40, 0.92), rgba(0, 102, 255, 0.72));
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .offer-tile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 10%, rgba(255,255,255,0.22), transparent 32%);
+            pointer-events: none;
+        }
+        .offer-tile span {
+            align-self: flex-start;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.16);
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: auto;
+        }
+        .offer-tile h3 { color: white; font-size: 24px; margin-bottom: 6px; }
+        .offer-tile p { color: rgba(255,255,255,0.82); font-weight: 600; line-height: 1.45; }
+        .offer-tile a { color: #ffffff; font-weight: 800; margin-top: 14px; }
+        .offer-tile.subscription {
+            background: linear-gradient(135deg, #0a1128, #17324f);
+            border: 1px solid rgba(250, 204, 21, 0.6);
+        }
+        .offer-tile.subscription span { background: #facc15; color: #0a1128; }
+
+        .formula-finder {
+            margin: 56px auto 0;
+            max-width: 760px;
+            padding: 34px;
+            border-radius: 22px;
+            background: rgba(10, 17, 40, 0.96);
+            color: white;
+            border: 1px solid rgba(250, 204, 21, 0.42);
+            box-shadow: 0 26px 60px rgba(15, 23, 42, 0.26);
+        }
+        .finder-kicker {
+            text-align: center;
+            color: #facc15;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        .formula-finder h3 { color: white; text-align: center; font-size: 30px; }
+        .formula-finder h3 span { color: #facc15; }
+        .finder-progress {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 28px 0;
+        }
+        .finder-progress span {
+            height: 5px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+        }
+        .finder-progress span.active { background: #facc15; }
+        .finder-step { display: none; }
+        .finder-step.active { display: block; animation: fadeInUpTitle 0.35s ease both; }
+        .finder-question { text-align: center; margin-bottom: 18px; }
+        .finder-question strong { display: block; font-size: 18px; }
+        .finder-question small { color: rgba(255,255,255,0.68); }
+        .finder-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .finder-option {
+            min-height: 88px;
+            padding: 16px;
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.06);
+            color: white;
+            text-align: left;
+            font-family: inherit;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .finder-option:hover,
+        .finder-option.selected {
+            border-color: #facc15;
+            background: rgba(250, 204, 21, 0.11);
+            transform: translateY(-2px);
+        }
+        .finder-option strong { display: block; font-size: 16px; margin-bottom: 3px; }
+        .finder-option small { color: rgba(255,255,255,0.68); }
+        .finder-result {
+            display: none;
+            text-align: center;
+        }
+        .finder-result.active { display: block; animation: fadeInUpTitle 0.35s ease both; }
+        .result-pill {
+            display: inline-flex;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(250, 204, 21, 0.18);
+            color: #facc15;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+        .result-price { font-size: 44px; font-weight: 900; color: #facc15; line-height: 1; margin: 10px 0; }
+        .result-list { list-style: none; margin: 20px auto; max-width: 430px; text-align: left; }
+        .result-list li { margin: 8px 0; color: rgba(255,255,255,0.86); }
+        .result-list li::before { content: '✓'; color: #facc15; font-weight: 900; margin-right: 8px; }
+        .finder-actions { display: grid; gap: 10px; margin-top: 18px; }
+        .btn-yellow {
+            background: #facc15;
+            color: #0a1128;
+            box-shadow: 0 12px 28px rgba(250, 204, 21, 0.26);
+        }
+        .btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(250, 204, 21, 0.34); }
 
         .zone { background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); overflow: hidden; }
         .zone-container { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: center; margin-top: 48px; }
@@ -461,6 +596,9 @@
             h2 { margin-bottom: 28px; }
             .hero-grid, .zone-container { grid-template-columns: 1fr; gap: 32px; }
             .features-grid, .pricing-grid, .contact-grid, .proof-grid { grid-template-columns: 1fr; gap: 20px; }
+            .offer-board, .finder-options { grid-template-columns: 1fr; }
+            .formula-finder { padding: 22px; margin-top: 34px; }
+            .offer-tile { min-height: 170px; }
             .footer-inner { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
             .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
@@ -529,7 +667,8 @@
             <ul class="nav-links">
                 <li><a href="#accueil" class="nav-item">Accueil</a></li>
                 <li><a href="#services" class="nav-item">Services</a></li>
-                <li><a href="#tarifs" class="nav-item">Tarifs</a></li>
+                <li><a href="#tarifs" class="nav-item">Formules</a></li>
+                <li><a href="abonnement.html" class="nav-item">Abonnements</a></li>
                 <li><a href="#zone" class="nav-item">Zone</a></li>
                 <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
@@ -540,7 +679,8 @@
         <div id="mobileMenu" class="mobile-nav">
             <a href="#accueil">Accueil</a>
             <a href="#services">Services</a>
-            <a href="#tarifs">Tarifs</a>
+            <a href="#tarifs">Formules</a>
+            <a href="abonnement.html">Abonnements</a>
             <a href="#zone">Zone</a>
             <a href="#contact">Contact</a>
         </div>
@@ -633,56 +773,89 @@
 
         <section class="pricing" id="tarifs">
             <div class="container">
-                <h2>Nos forfaits de nettoyage</h2>
-                <div class="pricing-grid">
-                    
-                    <div class="price-card active">
-                        <div class="price-duration">Durée : +/- 3h</div>
-                        <h3>Nettoyage de Base<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Intérieur & Extérieur</span></h3>
-                        <div class="price-value">49.95 <span>CHF</span></div>
-                        <ul class="price-list">
-                            <li>Prise en charge de votre véhicule sur Fribourg et alentours</li>
-                            <li>Pré-lavage professionnel</li>
-                            <li>Lavage carrosserie complet 100% à la main</li>
-                            <li>Décontamination jantes & nettoyage pneus</li>
-                            <li>Séchage manuel minutieux</li>
-                            <li>Nettoyage vitrerie</li>
-                            <li>Aspiration de l'habitacle</li>
-                            <li>Dépoussiérage tableau de bord et plastiques</li>
-                        </ul>
-                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20j%27aimerais%20le%20forfait%20Nettoyage%20de%20Base%20à%2049.95%20CHF" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; margin-top: auto;">Réserver ce forfait</a>
+                <h2>Trouvez votre formule</h2>
+                <div class="offer-board" aria-label="Accès rapides aux offres">
+                    <article class="offer-tile">
+                        <span>Dès 49.95 CHF</span>
+                        <h3>Particuliers</h3>
+                        <p>Un nettoyage ponctuel à domicile, intérieur et extérieur selon le besoin.</p>
+                        <a href="#formule">Trouver ma formule →</a>
+                    </article>
+                    <article class="offer-tile">
+                        <span>Sur devis</span>
+                        <h3>Entreprises</h3>
+                        <p>Flottes, véhicules de service, concessions et interventions récurrentes.</p>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20entreprise" target="_blank" rel="noopener noreferrer">Espace pro →</a>
+                    </article>
+                    <article class="offer-tile subscription">
+                        <span>Abonnements</span>
+                        <h3>Entretien régulier</h3>
+                        <p>Forfaits mensuels ou annuels, contrat suisse à valider, prix garanti.</p>
+                        <a href="abonnement.html">Découvrir les abonnements →</a>
+                    </article>
+                </div>
+
+                <div class="formula-finder" id="formule" aria-live="polite">
+                    <div class="finder-kicker">En 30 secondes</div>
+                    <h3>Trouvez votre <span>formule</span></h3>
+                    <div class="finder-progress" aria-hidden="true">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
                     </div>
 
-                    <div class="price-card disabled">
-                        <div class="price-duration">Durée : +/- 4h</div>
-                        <h3>Nettoyage Approfondi<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Intérieur détaillé & Extérieur</span></h3>
-                        <div class="price-value">99.95 <span>CHF</span></div>
-                        <ul class="price-list">
-                            <li><strong>Tout le Forfait de Base inclus</strong></li>
-                            <li>Nettoyage intérieur ultra détaillé avec aspirateur professionnel</li>
-                            <li>Application de Cire Hybride (brillance & protection)</li>
-                            <li>Protection Hydrophobe pour les vitres</li>
-                            <li>Traitement spécifique des Tissus, Cuir et Alcantara</li>
-                            <li>Shampoing Sièges, tapis et moquettes</li>
-                            <li>Utilisation de produits haut de gamme</li>
-                        </ul>
-                        <span class="btn btn-disabled" style="width: 100%; margin-top: auto;">Actuellement indisponible</span>
+                    <div class="finder-step active" data-step="1">
+                        <div class="finder-question">
+                            <strong>Quel est votre type de véhicule ?</strong>
+                            <small>Chaque catégorie a un tarif adapté.</small>
+                        </div>
+                        <div class="finder-options">
+                            <button class="finder-option" data-value="Citadine" data-price="49.95"><strong>Citadine</strong><small>Clio, 208, Polo...</small></button>
+                            <button class="finder-option" data-value="Berline / SUV" data-price="59.95"><strong>Berline / SUV</strong><small>Classe C, Q3, 3008...</small></button>
+                            <button class="finder-option" data-value="Prestige" data-price="Sur devis"><strong>Prestige</strong><small>Porsche, AMG, Tesla...</small></button>
+                            <button class="finder-option" data-value="Monospace / Utilitaire" data-price="Sur devis"><strong>Monospace / Utilitaire</strong><small>Van, fourgon, 7 places...</small></button>
+                        </div>
                     </div>
 
-                    <div class="price-card disabled">
-                        <div class="price-duration">Durée : +/- 5h</div>
-                        <h3>Nettoyage Premium<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Avec Traitement Vapeur</span></h3>
-                        <div class="price-value" style="font-size: 36px;">Sur devis</div>
-                        <ul class="price-list">
-                            <li><strong>Tout le Forfait Approfondi inclus</strong></li>
-                            <li>Forfait complet entièrement personnalisé</li>
-                            <li>Nettoyage avec Traitement Vapeur anti-bactérien</li>
-                            <li>Shampoing/Vapeur en profondeur : Sièges, tapis, moquettes</li>
-                            <li>Traitement et soin réparateur pour le cuir</li>
-                            <li>Protection Céramique de pointe</li>
-                            <li>Finitions premium pour un résultat showroom</li>
+                    <div class="finder-step" data-step="2">
+                        <div class="finder-question">
+                            <strong>Niveau de saleté ?</strong>
+                            <small>Soyez honnête, on ne juge pas.</small>
+                        </div>
+                        <div class="finder-options">
+                            <button class="finder-option" data-value="Léger"><strong>Léger</strong><small>Poussière et traces</small></button>
+                            <button class="finder-option" data-value="Moyen"><strong>Moyen</strong><small>Taches et usage quotidien</small></button>
+                            <button class="finder-option" data-value="Très sale"><strong>Très sale</strong><small>Enfants, animaux, boue...</small></button>
+                        </div>
+                    </div>
+
+                    <div class="finder-step" data-step="3">
+                        <div class="finder-question">
+                            <strong>Quel nettoyage ?</strong>
+                            <small>On s'adapte à votre besoin.</small>
+                        </div>
+                        <div class="finder-options">
+                            <button class="finder-option" data-value="Intérieur"><strong>Intérieur</strong><small>Sièges, plastiques, vitres</small></button>
+                            <button class="finder-option" data-value="Extérieur"><strong>Extérieur</strong><small>Carrosserie, jantes, pneus</small></button>
+                            <button class="finder-option" data-value="Intérieur + Extérieur"><strong>Int. + Ext.</strong><small>Le combo gagnant</small></button>
+                        </div>
+                    </div>
+
+                    <div class="finder-result" id="finderResult">
+                        <span class="result-pill">On vous recommande</span>
+                        <h3 id="resultTitle">Nettoyage de Base</h3>
+                        <div class="result-price" id="resultPrice">49.95 CHF</div>
+                        <ul class="result-list">
+                            <li>Aspiration habitacle</li>
+                            <li>Lavage à la main selon la formule choisie</li>
+                            <li>Déplacement à Fribourg et alentours</li>
+                            <li>Paiement sur place Twint ou espèces</li>
                         </ul>
-                        <span class="btn btn-disabled" style="width: 100%; margin-top: auto;">Actuellement indisponible</span>
+                        <div class="finder-actions">
+                            <a id="resultWhatsapp" href="https://wa.me/41779043121" target="_blank" rel="noopener noreferrer" class="btn btn-yellow">Réserver via WhatsApp →</a>
+                            <a href="abonnement.html" class="btn btn-secondary">Voir les abonnements</a>
+                            <button type="button" class="btn btn-disabled" id="restartFinder">Recommencer</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -762,7 +935,8 @@
                     <h3>À propos</h3>
                     <a href="#accueil">Accueil</a>
                     <a href="#services">Services</a>
-                    <a href="#tarifs">Tarifs</a>
+                    <a href="#tarifs">Formules</a>
+                    <a href="abonnement.html">Abonnements</a>
                     <a href="#contact">Contact</a>
                 </div>
 
@@ -898,7 +1072,8 @@
         const revealGroups = [
             ['.proof-card', 'reveal reveal-scale'],
             ['.feature-card', 'reveal reveal-scale'],
-            ['.price-card', 'reveal reveal-scale'],
+            ['.offer-tile', 'reveal reveal-scale'],
+            ['.formula-finder', 'reveal reveal-scale'],
             ['.contact-item', 'reveal reveal-scale'],
             ['.trust-item', 'reveal'],
             ['.zone-content', 'reveal reveal-left'],
@@ -926,6 +1101,93 @@
         } else {
             document.querySelectorAll('.reveal').forEach(element => element.classList.add('is-visible'));
         }
+
+        /* Assistant de recommandation */
+        const finder = {
+            step: 1,
+            answers: {},
+            basePrice: 49.95
+        };
+
+        const formulaFinder = document.getElementById('formule');
+        const finderSteps = document.querySelectorAll('.finder-step');
+        const progressItems = document.querySelectorAll('.finder-progress span');
+        const finderResult = document.getElementById('finderResult');
+        const resultTitle = document.getElementById('resultTitle');
+        const resultPrice = document.getElementById('resultPrice');
+        const resultWhatsapp = document.getElementById('resultWhatsapp');
+        const restartFinder = document.getElementById('restartFinder');
+
+        function showFinderStep(step) {
+            finder.step = step;
+            finderSteps.forEach(item => item.classList.toggle('active', Number(item.dataset.step) === step));
+            progressItems.forEach((item, index) => item.classList.toggle('active', index < step));
+            finderResult.classList.remove('active');
+        }
+
+        function getRecommendation() {
+            const vehicle = finder.answers.vehicle;
+            const dirt = finder.answers.dirt;
+            const cleaning = finder.answers.cleaning;
+            const needsQuote = finder.answers.basePrice === 'Sur devis' || dirt === 'Très sale';
+            const cleaningExtra = cleaning === 'Intérieur + Extérieur' ? 30 : cleaning === 'Extérieur' ? 15 : 0;
+            const dirtExtra = dirt === 'Moyen' ? 15 : 0;
+
+            if (needsQuote) {
+                return {
+                    title: 'Devis personnalisé',
+                    price: 'Sur devis',
+                    message: `Bonjour SW Carcleaning, je souhaite un devis pour ${vehicle}, niveau ${dirt}, nettoyage ${cleaning}.`
+                };
+            }
+
+            const price = Number(finder.answers.basePrice) + cleaningExtra + dirtExtra;
+            const title = cleaning === 'Intérieur + Extérieur' ? 'Formule complète' : `Nettoyage ${cleaning.toLowerCase()}`;
+
+            return {
+                title,
+                price: `${price.toFixed(2)} CHF`,
+                message: `Bonjour SW Carcleaning, je souhaite réserver: ${title}. Véhicule: ${vehicle}. Saleté: ${dirt}. Nettoyage: ${cleaning}. Prix indicatif: ${price.toFixed(2)} CHF.`
+            };
+        }
+
+        function showFinderResult() {
+            finderSteps.forEach(item => item.classList.remove('active'));
+            progressItems.forEach(item => item.classList.add('active'));
+            const recommendation = getRecommendation();
+            resultTitle.textContent = recommendation.title;
+            resultPrice.textContent = recommendation.price;
+            resultWhatsapp.href = `https://wa.me/41779043121?text=${encodeURIComponent(recommendation.message)}`;
+            finderResult.classList.add('active');
+        }
+
+        document.querySelectorAll('.finder-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const currentStep = Number(option.closest('.finder-step').dataset.step);
+                option.closest('.finder-options').querySelectorAll('.finder-option').forEach(item => item.classList.remove('selected'));
+                option.classList.add('selected');
+
+                if (currentStep === 1) {
+                    finder.answers.vehicle = option.dataset.value;
+                    finder.answers.basePrice = option.dataset.price;
+                    showFinderStep(2);
+                } else if (currentStep === 2) {
+                    finder.answers.dirt = option.dataset.value;
+                    showFinderStep(3);
+                } else {
+                    finder.answers.cleaning = option.dataset.value;
+                    showFinderResult();
+                }
+
+                formulaFinder.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+        restartFinder.addEventListener('click', () => {
+            finder.answers = {};
+            document.querySelectorAll('.finder-option').forEach(option => option.classList.remove('selected'));
+            showFinderStep(1);
+        });
 
         /* Gestion des Modals (CGV / Confidentialité) */
         function openModal(modalId) {

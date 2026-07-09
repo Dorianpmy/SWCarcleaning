@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a1128">
+    <title>Abonnements lavage auto à Fribourg | SW Carcleaning</title>
+    <meta name="description" content="Abonnements SW Carcleaning à Fribourg: entretien mensuel ou annuel, contrat suisse à valider, déplacement à domicile inclus.">
+    <link rel="canonical" href="https://www.swcarcleaning.ch/abonnement.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #080b12;
+            --panel: #111827;
+            --panel-soft: #172033;
+            --gold: #facc15;
+            --gold-dark: #b98a00;
+            --white: #ffffff;
+            --muted: #b7c0d4;
+            --line: rgba(255, 255, 255, 0.14);
+            --whatsapp: #25d366;
+            --radius: 18px;
+            --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--ink);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--line);
+            background: rgba(8, 11, 18, 0.82);
+            backdrop-filter: blur(16px);
+        }
+        .nav {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .logo { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; }
+        .logo span { color: var(--gold); }
+        .nav-links { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 14px; }
+        .nav-links a {
+            padding: 10px 13px;
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.82);
+        }
+        .nav-links a:hover,
+        .nav-links .active { background: rgba(250, 204, 21, 0.14); color: var(--gold); }
+        .reserve-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 18px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #0a1128;
+            font-weight: 900;
+            box-shadow: 0 12px 30px rgba(250, 204, 21, 0.24);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            padding: 86px 0 70px;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(8, 11, 18, 0.96), rgba(8, 11, 18, 0.78), rgba(8, 11, 18, 0.95)),
+                radial-gradient(circle at 72% 18%, rgba(250, 204, 21, 0.16), transparent 34%),
+                linear-gradient(135deg, #111827, #070911);
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: auto -10% -28% 25%;
+            height: 380px;
+            background: linear-gradient(90deg, transparent, rgba(250, 204, 21, 0.16), transparent);
+            transform: rotate(-8deg);
+            pointer-events: none;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 720px; }
+        .eyebrow {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px 12px;
+            border: 1px solid rgba(250, 204, 21, 0.5);
+            border-radius: 999px;
+            color: var(--gold);
+            font-weight: 900;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 22px;
+        }
+        h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+        }
+        h1 span { color: var(--gold); }
+        .hero p { max-width: 650px; color: rgba(255, 255, 255, 0.78); font-size: 18px; margin-bottom: 28px; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 50px;
+            padding: 0 22px;
+            border: 0;
+            border-radius: 14px;
+            font: inherit;
+            font-weight: 900;
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--gold); color: #0a1128; box-shadow: 0 16px 36px rgba(250, 204, 21, 0.25); }
+        .btn-outline { background: rgba(255, 255, 255, 0.05); color: var(--white); border: 1px solid rgba(250, 204, 21, 0.42); }
+        .btn-whatsapp { background: var(--whatsapp); color: #07120b; }
+        .proof-row { display: flex; flex-wrap: wrap; gap: 16px; color: rgba(255, 255, 255, 0.78); font-size: 13px; font-weight: 800; }
+        .proof-row span { display: inline-flex; align-items: center; gap: 7px; }
+        .proof-row span::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+
+        section { padding: 82px 0; }
+        .section-head { text-align: center; max-width: 720px; margin: 0 auto 42px; }
+        .section-head small {
+            display: block;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+        h2 { font-size: clamp(30px, 4vw, 50px); line-height: 1.08; letter-spacing: -0.03em; }
+        .section-head p { color: var(--muted); margin-top: 12px; }
+
+        .benefits {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+        }
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .benefit {
+            padding: 30px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.045);
+            text-align: center;
+        }
+        .benefit-icon {
+            display: grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 16px;
+            border-radius: 16px;
+            background: rgba(250, 204, 21, 0.15);
+            color: var(--gold);
+            font-size: 24px;
+        }
+        .benefit h3 { margin-bottom: 8px; font-size: 18px; }
+        .benefit p { color: var(--muted); font-size: 14px; }
+
+        .plans { background: #0b0f18; }
+        .vehicle-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .vehicle-tabs button {
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--white);
+            font: inherit;
+            font-weight: 900;
+            cursor: pointer;
+        }
+        .vehicle-tabs button.active { border-color: var(--gold); color: var(--gold); background: rgba(250, 204, 21, 0.13); }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+        .plan-card {
+            position: relative;
+            padding: 30px;
+            border-radius: 22px;
+            border: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025));
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+            display: flex;
+            flex-direction: column;
+        }
+        .plan-card.popular {
+            border-color: rgba(250, 204, 21, 0.78);
+            box-shadow: 0 24px 70px rgba(250, 204, 21, 0.12);
+        }
+        .tag {
+            display: inline-flex;
+            align-self: flex-start;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(250, 204, 21, 0.14);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .plan-card h3 { font-size: 26px; margin-bottom: 4px; }
+        .plan-sub { color: var(--muted); font-weight: 700; margin-bottom: 22px; }
+        .price { font-size: 50px; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+        .price span { font-size: 17px; color: var(--muted); }
+        .saving {
+            margin: 18px 0 24px;
+            padding: 16px;
+            border-radius: 15px;
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.2), rgba(250, 204, 21, 0.07));
+            color: var(--gold);
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .plan-list { list-style: none; display: grid; gap: 12px; margin-bottom: 26px; color: rgba(255,255,255,0.82); font-size: 14px; }
+        .plan-list li { display: flex; gap: 10px; align-items: flex-start; }
+        .plan-list li::before { content: '✓'; color: var(--gold); font-weight: 900; }
+        .plan-card .btn { margin-top: auto; width: 100%; }
+
+        .monthly {
+            background:
+                linear-gradient(135deg, rgba(250, 204, 21, 0.11), rgba(255,255,255,0.03)),
+                #0b0f18;
+        }
+        .monthly-panel {
+            border: 1px solid rgba(250, 204, 21, 0.38);
+            border-radius: 26px;
+            background: rgba(255,255,255,0.045);
+            box-shadow: var(--shadow);
+            padding: 34px;
+        }
+        .monthly-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        .monthly h2 { margin-bottom: 16px; }
+        .monthly p { color: var(--muted); margin-bottom: 18px; }
+        .monthly-list { list-style: none; display: grid; gap: 11px; margin-bottom: 22px; }
+        .monthly-list li::before { content: '✓'; color: var(--gold); margin-right: 10px; font-weight: 900; }
+        .monthly-prices {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .monthly-price {
+            min-height: 138px;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(0,0,0,0.18);
+            text-align: center;
+        }
+        .monthly-price strong { display: block; color: var(--gold); font-size: 26px; line-height: 1; margin: 7px 0; }
+        .monthly-price span { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+
+        .contract {
+            background: linear-gradient(180deg, #0b0f18, #080b12);
+        }
+        .contract-card {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 28px;
+            padding: 28px;
+            border-radius: 26px;
+            border: 1px solid var(--line);
+            background: rgba(255,255,255,0.045);
+            box-shadow: var(--shadow);
+        }
+        .contract-copy {
+            padding: 22px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, rgba(250,204,21,0.12), rgba(255,255,255,0.03));
+        }
+        .contract-copy h2 { margin-bottom: 16px; }
+        .contract-copy p { color: var(--muted); margin-bottom: 14px; }
+        .notice {
+            margin-top: 22px;
+            padding: 16px;
+            border-radius: 15px;
+            border: 1px solid rgba(250, 204, 21, 0.32);
+            color: rgba(255,255,255,0.82);
+            font-size: 14px;
+        }
+        form { display: grid; gap: 14px; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        label { display: grid; gap: 7px; color: rgba(255,255,255,0.86); font-weight: 800; font-size: 13px; }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            min-height: 46px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: rgba(0,0,0,0.22);
+            color: white;
+            font: inherit;
+            padding: 12px 13px;
+            outline: none;
+        }
+        select option { color: #0a1128; }
+        textarea { min-height: 94px; resize: vertical; }
+        input:focus,
+        select:focus,
+        textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.12); }
+        .checks { display: grid; gap: 10px; margin: 4px 0; }
+        .check {
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.82);
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .check input { min-height: auto; margin-top: 3px; accent-color: var(--gold); }
+        .status { display: none; color: var(--gold); font-weight: 800; font-size: 13px; }
+        .status.active { display: block; }
+
+        footer { padding: 34px 0; color: rgba(255,255,255,0.58); border-top: 1px solid var(--line); }
+        .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+        .wa-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: #07120b;
+            font-weight: 900;
+            box-shadow: 0 16px 38px rgba(37, 211, 102, 0.35);
+            z-index: 10;
+        }
+
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 860px) {
+            .nav { height: auto; min-height: 72px; align-items: flex-start; padding: 14px 0; flex-direction: column; }
+            .nav-links { width: 100%; overflow-x: auto; padding-bottom: 2px; }
+            .reserve-btn { width: 100%; }
+            .hero { min-height: auto; padding: 62px 0 48px; }
+            .hero-actions .btn { width: 100%; }
+            .benefit-grid,
+            .plan-grid,
+            .monthly-grid,
+            .contract-card,
+            .form-grid { grid-template-columns: 1fr; }
+            .monthly-prices { grid-template-columns: 1fr; }
+            .contract-card,
+            .monthly-panel { padding: 18px; }
+            section { padding: 58px 0; }
+            h1 { font-size: 42px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container nav">
+            <a class="logo" href="index.html">SW <span>Carcleaning</span></a>
+            <nav class="nav-links" aria-label="Menu principal">
+                <a href="index.html#tarifs">Particuliers</a>
+                <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20entreprise" target="_blank" rel="noopener noreferrer">Entreprises</a>
+                <a href="#forfaits" class="active">Abonnements</a>
+                <a href="tel:+41779043121">+41 77 904 31 21</a>
+            </nav>
+            <a class="reserve-btn" href="#contrat">Souscrire</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content reveal">
+                <span class="eyebrow">Forfait annuel</span>
+                <h1>Economisez jusqu'a <span>300 CHF</span> sur l'entretien de votre voiture</h1>
+                <p>Un abonnement simple: SW Carcleaning vient chez vous, nettoie votre voiture regulierement et vous gardez un tarif fixe. Deplacement inclus, qualite constante, contrat suisse valide apres confirmation ecrite.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#forfaits">Voir les forfaits</a>
+                    <a class="btn btn-outline" href="#contrat">Remplir le contrat</a>
+                </div>
+                <div class="proof-row" aria-label="Avantages">
+                    <span>Deplacement inclus</span>
+                    <span>Prix garanti</span>
+                    <span>Rappel automatique</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits" aria-labelledby="benefits-title">
+            <div class="container">
+                <div class="section-head reveal">
+                    <small>Pourquoi s'abonner</small>
+                    <h2 id="benefits-title">Votre voiture reste propre sans y penser</h2>
+                </div>
+                <div class="benefit-grid">
+                    <article class="benefit reveal">
+                        <div class="benefit-icon">⌖</div>
+                        <h3>0 CHF de deplacement</h3>
+                        <p>Domicile, bureau ou parking. Vous ne bougez pas, on apporte le materiel.</p>
+                    </article>
+                    <article class="benefit reveal">
+                        <div class="benefit-icon">✦</div>
+                        <h3>Qualite constante</h3>
+                        <p>Produits premium, controle final et suivi de votre preference lavage apres lavage.</p>
+                    </article>
+                    <article class="benefit reveal">
+                        <div class="benefit-icon">▣</div>
+                        <h3>Planning flexible</h3>
+                        <p>4, 6 ou 12 lavages par an. On planifie ensemble, puis on vous rappelle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="plans" id="forfaits">
+            <div class="container">
+                <div class="section-head reveal">
+                    <small>Nos forfaits</small>
+                    <h2>Choisissez votre formule</h2>
+                    <p>Prix indicatifs pour citadine. Le contrat final est confirme par SW Carcleaning selon le vehicule, la zone et l'etat initial.</p>
+                </div>
+                <div class="vehicle-tabs" aria-label="Categories de vehicule">
+                    <button type="button" class="active" data-multiplier="1" data-label="Citadine">Citadine</button>
+                    <button type="button" data-multiplier="1.18" data-label="Berline / SUV">Berline / SUV</button>
+                    <button type="button" data-multiplier="1.35" data-label="SUV+ / Monospace">SUV+ / Monospace</button>
+                </div>
+                <div class="plan-grid">
+                    <article class="plan-card reveal" data-plan-card data-base="340" data-plan="Elegance">
+                        <span class="tag">4 lavages par an</span>
+                        <h3>Elegance</h3>
+                        <p class="plan-sub">Pour garder une voiture propre toute l'annee.</p>
+                        <div class="price"><strong data-price>340</strong> CHF <span>/ an</span></div>
+                        <div class="saving">Vous economisez <span data-saving>60</span> CHF</div>
+                        <ul class="plan-list">
+                            <li>4 nettoyages interieur</li>
+                            <li>Planification prioritaire</li>
+                            <li>Tarif preferentiel garanti 12 mois</li>
+                            <li>Rappel automatique avant chaque session</li>
+                            <li>Deplacement offert</li>
+                        </ul>
+                        <a class="btn btn-outline" href="#contrat" data-plan-link>Choisir Elegance</a>
+                    </article>
+                    <article class="plan-card reveal" data-plan-card data-base="480" data-plan="Signature">
+                        <span class="tag">6 lavages par an</span>
+                        <h3>Signature</h3>
+                        <p class="plan-sub">Le bon rythme pour usage quotidien.</p>
+                        <div class="price"><strong data-price>480</strong> CHF <span>/ an</span></div>
+                        <div class="saving">Vous economisez <span data-saving>120</span> CHF</div>
+                        <ul class="plan-list">
+                            <li>6 nettoyages interieur</li>
+                            <li>Creneau reserve a votre convenance</li>
+                            <li>Tarif preferentiel garanti 12 mois</li>
+                            <li>Rappel automatique</li>
+                            <li>Qualite pro garantie</li>
+                        </ul>
+                        <a class="btn btn-outline" href="#contrat" data-plan-link>Choisir Signature</a>
+                    </article>
+                    <article class="plan-card popular reveal" data-plan-card data-base="900" data-plan="VIP">
+                        <span class="tag">Populaire</span>
+                        <h3>VIP</h3>
+                        <p class="plan-sub">Pour une voiture impeccable toute l'annee.</p>
+                        <div class="price"><strong data-price>900</strong> CHF <span>/ an</span></div>
+                        <div class="saving">Vous economisez <span data-saving>300</span> CHF</div>
+                        <ul class="plan-list">
+                            <li>12 nettoyages interieur</li>
+                            <li>Planification prioritaire VIP</li>
+                            <li>Interlocuteur unique attitre</li>
+                            <li>Creneau dedie chaque mois</li>
+                            <li>Disponible 7/7 selon planning</li>
+                        </ul>
+                        <a class="btn btn-primary" href="#contrat" data-plan-link>Choisir VIP</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="monthly" aria-labelledby="monthly-title">
+            <div class="container monthly-panel reveal">
+                <div class="monthly-grid">
+                    <div>
+                        <span class="eyebrow">Nouveau - offre mensuelle</span>
+                        <h2 id="monthly-title">Easy Clean, votre interieur impeccable chaque mois</h2>
+                        <p>Une formule mensuelle simple pour l'entretien interieur complet. Sans engagement long: vous validez le contrat, puis vous pouvez resilier selon les conditions confirmees par ecrit.</p>
+                        <ul class="monthly-list">
+                            <li>Aspiration habitacle complete</li>
+                            <li>Nettoyage plastiques et vitres interieures</li>
+                            <li>Deplacement inclus a Fribourg et alentours</li>
+                            <li>Rappel automatique chaque mois</li>
+                        </ul>
+                        <a class="btn btn-primary" href="#contrat" data-select-plan="Easy Clean mensuel">Decouvrir Easy Clean</a>
+                    </div>
+                    <div class="monthly-prices">
+                        <div class="monthly-price">
+                            <span>Citadine</span>
+                            <strong>50 CHF</strong>
+                            <span>/ mois</span>
+                        </div>
+                        <div class="monthly-price">
+                            <span>Berline / SUV</span>
+                            <strong>60 CHF</strong>
+                            <span>/ mois</span>
+                        </div>
+                        <div class="monthly-price">
+                            <span>SUV+ / Monospace</span>
+                            <strong>70 CHF</strong>
+                            <span>/ mois</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contract" id="contrat">
+            <div class="container">
+                <div class="contract-card reveal">
+                    <div class="contract-copy">
+                        <span class="eyebrow">Contrat suisse</span>
+                        <h2>Demande d'abonnement a valider</h2>
+                        <p>Remplissez les informations utiles. Le message part sur WhatsApp et SW Carcleaning vous confirme ensuite le contrat, les dates, le prix final et les conditions par ecrit.</p>
+                        <p>Ce formulaire n'est pas un paiement en ligne. Il sert a preparer un accord clair, adapte aux prestations en Suisse.</p>
+                        <div class="notice">
+                            Les donnees transmises servent uniquement a traiter votre demande, selon la LPD suisse. La demande devient contractuelle apres confirmation ecrite de SW Carcleaning et acceptation finale du client.
+                        </div>
+                    </div>
+                    <form id="subscriptionForm">
+                        <div class="form-grid">
+                            <label>Nom et prenom
+                                <input name="name" autocomplete="name" required>
+                            </label>
+                            <label>Telephone
+                                <input name="phone" autocomplete="tel" required>
+                            </label>
+                            <label>Email
+                                <input type="email" name="email" autocomplete="email" required>
+                            </label>
+                            <label>Entreprise (optionnel)
+                                <input name="company" autocomplete="organization">
+                            </label>
+                            <label>Adresse d'intervention
+                                <input name="address" autocomplete="street-address" required>
+                            </label>
+                            <label>NPA / Ville
+                                <input name="city" autocomplete="postal-code" required>
+                            </label>
+                            <label>Vehicule
+                                <input name="vehicle" placeholder="Marque, modele, plaque" required>
+                            </label>
+                            <label>Formule souhaitee
+                                <select name="plan" id="planSelect" required>
+                                    <option value="">Choisir une formule</option>
+                                    <option>Easy Clean mensuel</option>
+                                    <option>Elegance - 4 lavages / an</option>
+                                    <option>Signature - 6 lavages / an</option>
+                                    <option>VIP - 12 lavages / an</option>
+                                    <option>Devis entreprise / flotte</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label>Remarques
+                            <textarea name="notes" placeholder="Disponibilites, etat du vehicule, parking, preferences..."></textarea>
+                        </label>
+
+                        <div class="checks">
+                            <label class="check"><input type="checkbox" name="accurate" required> Je confirme que les informations fournies sont exactes.</label>
+                            <label class="check"><input type="checkbox" name="terms" required> J'ai lu et j'accepte les Conditions Generales de Vente de SW Carcleaning.</label>
+                            <label class="check"><input type="checkbox" name="contact" required> J'accepte que SW Carcleaning me contacte pour etablir et valider le contrat d'abonnement.</label>
+                            <label class="check"><input type="checkbox" name="confirm" required> Je comprends que la demande devient contractuelle uniquement apres confirmation ecrite de SW Carcleaning.</label>
+                        </div>
+                        <p class="status" id="formStatus">Merci de remplir les champs obligatoires et de cocher les confirmations.</p>
+                        <button class="btn btn-whatsapp" type="submit">Envoyer la demande sur WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>© 2026 SW Carcleaning. Tous droits reserves.</p>
+            <p><a href="index.html">Retour au site</a> · <a href="mailto:s.wcarcleaning7@gmail.com">s.wcarcleaning7@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <a class="wa-float" href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20j'ai%20une%20question%20sur%20les%20abonnements" target="_blank" rel="noopener noreferrer" aria-label="Question sur WhatsApp">WA</a>
+
+    <script>
+        const vehicleButtons = document.querySelectorAll('.vehicle-tabs button');
+        const planCards = document.querySelectorAll('[data-plan-card]');
+        const planSelect = document.getElementById('planSelect');
+        const subscriptionForm = document.getElementById('subscriptionForm');
+        const formStatus = document.getElementById('formStatus');
+
+        function updatePlanPrices(multiplier, label) {
+            planCards.forEach(card => {
+                const base = Number(card.dataset.base);
+                const price = Math.round(base * multiplier / 10) * 10;
+                const saving = Math.max(40, Math.round((base * 0.18) * multiplier / 10) * 10);
+                card.querySelector('[data-price]').textContent = price;
+                card.querySelector('[data-saving]').textContent = saving;
+                card.querySelector('[data-plan-link]').textContent = `Choisir ${card.dataset.plan}`;
+                card.dataset.vehicle = label;
+            });
+        }
+
+        vehicleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                vehicleButtons.forEach(item => item.classList.remove('active'));
+                button.classList.add('active');
+                updatePlanPrices(Number(button.dataset.multiplier), button.dataset.label);
+            });
+        });
+
+        document.querySelectorAll('[data-plan-link], [data-select-plan]').forEach(link => {
+            link.addEventListener('click', () => {
+                const plan = link.dataset.selectPlan || `${link.closest('[data-plan-card]')?.dataset.plan || ''} - abonnement`;
+                if (planSelect && plan) {
+                    const match = Array.from(planSelect.options).find(option => option.text.includes(plan.split(' ')[0]));
+                    if (match) planSelect.value = match.value;
+                }
+            });
+        });
+
+        subscriptionForm.addEventListener('submit', event => {
+            event.preventDefault();
+            formStatus.classList.remove('active');
+
+            if (!subscriptionForm.checkValidity()) {
+                formStatus.classList.add('active');
+                subscriptionForm.reportValidity();
+                return;
+            }
+
+            const data = new FormData(subscriptionForm);
+            const message = [
+                'Bonjour SW Carcleaning, je souhaite faire une demande d abonnement.',
+                '',
+                `Nom: ${data.get('name')}`,
+                `Telephone: ${data.get('phone')}`,
+                `Email: ${data.get('email')}`,
+                `Entreprise: ${data.get('company') || '-'}`,
+                `Adresse: ${data.get('address')}`,
+                `NPA / Ville: ${data.get('city')}`,
+                `Vehicule: ${data.get('vehicle')}`,
+                `Formule: ${data.get('plan')}`,
+                `Remarques: ${data.get('notes') || '-'}`,
+                '',
+                'Confirmations cochees: informations exactes, CGV acceptees, contact accepte, validation contractuelle apres confirmation ecrite.'
+            ].join('\n');
+
+            window.open(`https://wa.me/41779043121?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+        });
+
+        const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.16 }) : null;
+
+        document.querySelectorAll('.reveal').forEach((element, index) => {
+            element.style.transitionDelay = `${Math.min(index * 70, 260)}ms`;
+            if (revealObserver) revealObserver.observe(element);
+            else element.classList.add('visible');
+        });
+    </script>
+</body>
+</html>
