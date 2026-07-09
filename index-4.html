@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0066ff">
+    <meta name="author" content="SW Carcleaning">
+    <meta name="copyright" content="SW Carcleaning © 2026">
+    
+    <title>Lavage Auto & Detailing à Domicile Fribourg | SW Carcleaning</title>
+    <meta name="description" content="🚗 Lavage auto professionnel à Fribourg. Nettoyage auto à domicile et detailing voiture à domicile 100% à la main. Découvrez notre forfait intérieur et extérieur de nettoyage dès 49.95 CHF.">
+    <meta name="keywords" content="lavage auto fribourg, detailing fribourg, nettoyage voiture domicile, car cleaning suisse, lavage professionnel fribourg, nettoyage carrosserie fribourg, cgv, politique de confidentialité, mentions légales, forfait intérieur et extérieur de nettoyage, lavage auto professionnel, nettoyage auto à domicile, detailing voiture à domicile, forfait de lavage extérieur">
+    
+    <link rel="canonical" href="https://www.swcarcleaning.ch/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.swcarcleaning.ch/">
+    <meta property="og:title" content="SW Carcleaning | Lavage Auto & Detailing à Domicile">
+    <meta property="og:description" content="Service de nettoyage voiture premium à Fribourg. 100% à la main, sans micro-rayures.">
+    <meta property="og:image" content="319682e5-0570-408f-ae5a-f8b49436a210.JPG">
+    <meta property="og:locale" content="fr_CH">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="icon" type="image/jpeg" href="319682e5-0570-408f-ae5a-f8b49436a210.JPG">
+    <link rel="apple-touch-icon" href="319682e5-0570-408f-ae5a-f8b49436a210.JPG">
+    
+    <style>
+        :root {
+            --primary: #0066ff;
+            --primary-hover: #0052cc;
+            --primary-light: #e6f0ff;
+            --dark: #0a1128;
+            --bg: #ffffff;
+            --surface: #f8f9fa;
+            --text-main: #1a202c;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --whatsapp: #25D366;
+            --facebook: #1877F2;
+            --instagram: #E1306C;
+            --gray-disabled: #9ca3af;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ANIMATIONS */
+        @keyframes slideDownHeader { from { opacity: 0; transform: translateY(-100%); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUpTitle { 0% { opacity: 0; transform: translateY(30px) scale(0.95); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0); } 70% { transform: scale(1.1); } 100% { opacity: 1; transform: scale(1); } }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; color: var(--dark); line-height: 1.15; margin-bottom: 24px; animation: fadeInUpTitle 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both; text-align: center; }
+        h1 span { color: var(--primary); background: linear-gradient(135deg, var(--primary) 0%, #00d2ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--dark); margin-bottom: 48px; text-align: center; }
+        h3 { font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(-45deg, #ffffff, #e6f0ff, #f8f9fa, #e0f2fe);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            min-height: calc(100vh - 80px); 
+            display: flex; 
+            align-items: center; 
+            text-align: center; 
+        }
+        .hero-content { display: flex; flex-direction: column; align-items: center; width: 100%; position: relative; z-index: 2; }
+        .badge { 
+            display: inline-block; 
+            padding: 8px 16px; 
+            background: rgba(0, 102, 255, 0.1); 
+            color: var(--primary); 
+            border-radius: var(--radius-md); 
+            font-weight: 700; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            margin: 0 auto 24px auto; 
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            backdrop-filter: blur(5px);
+            animation: float 4s ease-in-out infinite;
+        }
+        .hero p { font-size: 18px; color: var(--text-muted); line-height: 1.8; margin: 0 auto 40px auto; max-width: 800px; animation: fadeInUpTitle 0.8s ease-out 0.4s both; }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeInUpTitle 0.8s ease-out 0.6s both; }
+
+        /* TRUST BADGES */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 24px;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 15px;
+        }
+        .trust-icon {
+            font-size: 24px;
+        }
+
+        /* BUTTONS */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 32px; border: none; border-radius: var(--radius-md); font-weight: 700; font-size: 15px; cursor: pointer; transition: var(--transition-slow); position: relative; overflow: hidden; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%); color: #ffffff; box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0, 102, 255, 0.5); }
+        .btn-secondary { background: rgba(255, 255, 255, 0.8); color: var(--primary); border: 2px solid var(--primary); backdrop-filter: blur(5px); }
+        .btn-secondary:hover { background: var(--primary-light); transform: translateY(-3px); }
+        .btn-whatsapp { background: linear-gradient(135deg, var(--whatsapp) 0%, #1fab54 100%); color: #ffffff; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); animation: pulseGlow 2.5s infinite; }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); animation: none; }
+        
+        .btn-disabled { background: var(--surface); color: var(--text-muted); border: 1px solid var(--border); cursor: not-allowed; box-shadow: none; }
+        .btn-disabled:hover { transform: none; background: var(--surface); }
+
+        /* HEADER */
+        header { position: fixed; top: 0; left: 0; right: 0; height: 80px; background: rgba(255, 255, 255, 0.8); border-bottom: 1px solid rgba(226, 232, 240, 0.5); z-index: 1000; transition: var(--transition); animation: slideDownHeader 0.6s ease-out; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.05); background: rgba(255, 255, 255, 0.95); border-bottom-color: transparent; }
+        .scroll-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary) 0%, #00d2ff 100%); width: 0%; transition: width 0.1s; }
+        
+        .navbar { display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 24px; position: relative; }
+        .logo { position: absolute; left: 24px; font-size: 24px; font-weight: 800; color: var(--dark); display: flex; align-items: center; white-space: nowrap; transition: var(--transition); }
+        .logo:hover { transform: scale(1.05); }
+        .logo span { color: var(--primary); font-weight: 400; margin-left: 4px; }
+
+        .nav-links { display: flex; list-style: none; gap: 12px; align-items: center; }
+        .nav-item { position: relative; padding: 8px 16px; color: var(--text-main); font-weight: 600; font-size: 15px; border-radius: var(--radius-md); transition: var(--transition-slow); }
+        .nav-item::before { content: ''; position: absolute; bottom: 4px; left: 50%; width: 0; height: 3px; background: var(--primary); border-radius: 2px; transform: translateX(-50%); transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .nav-item:hover { color: var(--primary); }
+        .nav-item:hover::before { width: 30px; }
+
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .menu-toggle span { width: 24px; height: 3px; background: var(--primary); border-radius: 2px; transition: var(--transition-slow); }
+        .mobile-nav { display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); flex-direction: column; padding: 24px; gap: 12px; z-index: 999; }
+        .mobile-nav.active { display: flex; }
+        .mobile-nav a { padding: 14px 16px; background: var(--primary-light); color: var(--primary); border-radius: var(--radius-md); font-weight: 600; text-align: center; }
+
+        /* SECTIONS */
+        section { padding: 80px 0; position: relative; }
+        
+        .features { background: var(--bg); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+        .feature-card { padding: 40px 32px; background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: center; transition: var(--transition-slow); }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 12px 30px rgba(0, 102, 255, 0.1); }
+        .feature-icon { font-size: 48px; margin-bottom: 16px; display: block; }
+
+        /* PRIX */
+        .pricing { background: linear-gradient(135deg, var(--surface) 0%, rgba(0, 102, 255, 0.05) 100%); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; align-items: stretch; }
+        .price-card { padding: 40px 24px; background: white; border-radius: var(--radius-lg); border: 2px solid var(--border); text-align: center; transition: var(--transition-slow); display: flex; flex-direction: column; position: relative; }
+        .price-card:not(.disabled):hover, .price-card.active { border-color: var(--primary); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 102, 255, 0.15); }
+        
+        /* CARD DISABLED STATE */
+        .price-card.disabled {
+            opacity: 0.65;
+            filter: grayscale(80%);
+            background: var(--surface);
+            pointer-events: none; /* Désactive les clics sur toute la carte */
+        }
+        
+        .price-duration { font-size: 14px; font-weight: 600; color: var(--primary); background: var(--primary-light); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 16px; }
+        .price-value { font-size: 48px; font-weight: 800; color: var(--dark); margin: 12px 0; }
+        .price-value span { font-size: 18px; color: var(--text-muted); }
+        
+        .price-list { list-style: none; margin: 32px 0; text-align: left; flex-grow: 1; }
+        .price-list li { padding: 10px 0; border-bottom: 1px solid var(--border); color: var(--text-main); font-size: 14px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+        .price-list li:last-child { border-bottom: none; }
+        .price-list li:before { content: '✓'; color: var(--primary); font-weight: 800; font-size: 16px; flex-shrink: 0; }
+        .price-card.disabled .price-list li:before { color: var(--text-muted); }
+
+        .zone-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 48px; }
+        .map-container { height: 400px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 16px 32px rgba(0,0,0,0.1); }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
+        .contact { background: white; }
+        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
+        .contact-item { padding: 40px 32px; background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); text-align: center; transition: var(--transition-slow); }
+        .contact-item:hover { transform: translateY(-8px); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .contact-icon { width: 80px; height: 80px; background: white; box-shadow: 0 8px 16px rgba(0,0,0,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); }
+        .contact-icon svg { width: 36px; height: 36px; fill: currentColor; }
+
+        /* FOOTER */
+        footer { background: var(--dark); color: #e2e8f0; padding: 60px 0 30px; }
+        .footer-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-bottom: 48px; }
+        .footer-col h3 { color: white; margin-bottom: 20px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col a { display: block; margin-bottom: 12px; color: #cbd5e1; font-size: 14px; transition: var(--transition); }
+        .footer-col a:hover { color: var(--primary); padding-left: 5px; }
+        
+        .social-links { display: flex; gap: 16px; margin-top: 16px; }
+        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; transition: var(--transition-slow); }
+        .social-links a.social-wa:hover { background: var(--whatsapp); transform: translateY(-4px) scale(1.1); }
+        .social-links a.social-ig:hover { background: var(--instagram); transform: translateY(-4px) scale(1.1); }
+        .social-links a.social-fb:hover { background: var(--facebook); transform: translateY(-4px) scale(1.1); }
+        .social-links svg { width: 22px; height: 22px; fill: currentColor; }
+
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; color: #94a3b8; }
+        .legal-links { display: flex; gap: 16px; }
+        .legal-links button { background: none; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; transition: var(--transition); padding: 0; font-family: inherit; }
+        .legal-links button:hover { color: var(--primary); text-decoration: underline; }
+
+        /* FLOATING WHATSAPP */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: var(--whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); transition: var(--transition-slow); z-index: 100; cursor: pointer; text-decoration: none; animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+        .whatsapp-float svg { width: 36px; height: 36px; fill: currentColor; }
+        .whatsapp-float:hover { transform: scale(1.15) rotate(-10deg); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6); }
+
+        /* MODALS (CGV & Confidentialité) */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(10, 17, 40, 0.8); backdrop-filter: blur(5px); }
+        .modal-content { background-color: #ffffff; color: var(--text-main); margin: 5% auto; padding: 40px; border-radius: var(--radius-lg); width: 90%; max-width: 800px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative; animation: slideDownHeader 0.4s ease-out; }
+        .close-modal { color: var(--text-muted); position: absolute; top: 20px; right: 24px; font-size: 32px; font-weight: bold; cursor: pointer; transition: color 0.3s; line-height: 1; }
+        .close-modal:hover { color: var(--dark); }
+        .modal-content h2 { text-align: left; margin-bottom: 24px; font-size: 28px; border-bottom: 2px solid var(--primary-light); padding-bottom: 12px; }
+        .modal-content h3 { margin-top: 24px; font-size: 18px; color: var(--primary); }
+        .modal-content p, .modal-content ul { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.7; }
+        .modal-content ul { padding-left: 20px; }
+        .modal-content li { margin-bottom: 6px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar { justify-content: space-between; padding: 0 16px; }
+            .logo { position: static; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .hero-grid, .zone-container { grid-template-columns: 1fr; gap: 32px; }
+            .features-grid, .pricing-grid, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
+            .whatsapp-float svg { width: 30px; height: 30px; }
+            .hero p { text-align: center; }
+            .modal-content { width: 95%; padding: 24px; margin: 15% auto; }
+            .trust-badges { gap: 16px; flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="scroll-progress" id="progressBar"></div>
+        <nav class="navbar" aria-label="Menu principal">
+            <a href="#accueil" class="logo" aria-label="Retour à l'accueil">SW <span>Carcleaning</span></a>
+            <ul class="nav-links">
+                <li><a href="#accueil" class="nav-item">Accueil</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#tarifs" class="nav-item">Tarifs</a></li>
+                <li><a href="#zone" class="nav-item">Zone</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+            <button id="menuBtn" class="menu-toggle" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="mobile-nav">
+            <a href="#accueil">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#tarifs">Tarifs</a>
+            <a href="#zone">Zone</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="badge">✨ Service Premium à domicile</div>
+                    <h1>Lavage auto et detailing <span>professionnel à Fribourg</span></h1>
+                    <p>SW Carcleaning vous propose un service 100% à la main, sans micro-rayures. Nous nous déplaçons directement chez vous pour nettoyer votre voiture avec des techniques de detailing de haute précision.</p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20gratuit" target="_blank" class="btn btn-whatsapp" aria-label="Demander un devis via WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Devis gratuit WhatsApp
+                        </a>
+                        <a href="#tarifs" class="btn btn-secondary">Découvrir nos tarifs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="trust-badges">
+            <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">💳</span>
+                Paiement sur place (Twint / Espèces)
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">🌱</span>
+                Produits écologiques & respectueux
+            </div>
+        </div>
+
+        <section class="features" id="services">
+            <div class="container">
+                <h2>Pourquoi choisir SW Carcleaning ?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🎯</div>
+                        <h3>Service à Domicile</h3>
+                        <p>Nous venons directement chez vous à Fribourg et alentours. Pas besoin de vous déplacer ou d'attendre en station.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">✋</div>
+                        <h3>100% À La Main</h3>
+                        <p>Lavage professionnel entièrement manual, sans macro ou micro-rayures. Respect total de votre carrosserie.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">💎</div>
+                        <h3>Detailing Premium</h3>
+                        <p>Techniques de pointe et utilisation de produits de très haute qualité pour sublimer et protéger votre véhicule.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="tarifs">
+            <div class="container">
+                <h2>Nos forfaits de nettoyage</h2>
+                <div class="pricing-grid">
+                    
+                    <div class="price-card active">
+                        <div class="price-duration">Durée : +/- 3h</div>
+                        <h3>Nettoyage de Base<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Intérieur & Extérieur</span></h3>
+                        <div class="price-value">49.95 <span>CHF</span></div>
+                        <ul class="price-list">
+                            <li>Prise en charge de votre véhicule sur Fribourg et alentours</li>
+                            <li>Pré-lavage professionnel</li>
+                            <li>Lavage carrosserie complet 100% à la main</li>
+                            <li>Décontamination jantes & nettoyage pneus</li>
+                            <li>Séchage manuel minutieux</li>
+                            <li>Nettoyage vitrerie</li>
+                            <li>Aspiration de l'habitacle</li>
+                            <li>Dépoussiérage tableau de bord et plastiques</li>
+                        </ul>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20j%27aimerais%20le%20forfait%20Nettoyage%20de%20Base%20à%2049.95%20CHF" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: auto;">Réserver ce forfait</a>
+                    </div>
+
+                    <div class="price-card disabled">
+                        <div class="price-duration">Durée : +/- 4h</div>
+                        <h3>Nettoyage Approfondi<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Intérieur détaillé & Extérieur</span></h3>
+                        <div class="price-value">99.95 <span>CHF</span></div>
+                        <ul class="price-list">
+                            <li><strong>Tout le Forfait de Base inclus</strong></li>
+                            <li>Nettoyage intérieur ultra détaillé avec aspirateur professionnel</li>
+                            <li>Application de Cire Hybride (brillance & protection)</li>
+                            <li>Protection Hydrophobe pour les vitres</li>
+                            <li>Traitement spécifique des Tissus, Cuir et Alcantara</li>
+                            <li>Shampoing Sièges, tapis et moquettes</li>
+                            <li>Utilisation de produits haut de gamme</li>
+                        </ul>
+                        <span class="btn btn-disabled" style="width: 100%; margin-top: auto;">Actuellement indisponible</span>
+                    </div>
+
+                    <div class="price-card disabled">
+                        <div class="price-duration">Durée : +/- 5h</div>
+                        <h3>Nettoyage Premium<br><span style="font-size:16px; font-weight:500; color:var(--text-muted);">Avec Traitement Vapeur</span></h3>
+                        <div class="price-value" style="font-size: 36px;">Sur devis</div>
+                        <ul class="price-list">
+                            <li><strong>Tout le Forfait Approfondi inclus</strong></li>
+                            <li>Forfait complet entièrement personnalisé</li>
+                            <li>Nettoyage avec Traitement Vapeur anti-bactérien</li>
+                            <li>Shampoing/Vapeur en profondeur : Sièges, tapis, moquettes</li>
+                            <li>Traitement et soin réparateur pour le cuir</li>
+                            <li>Protection Céramique de pointe</li>
+                            <li>Finitions premium pour un résultat showroom</li>
+                        </ul>
+                        <span class="btn btn-disabled" style="width: 100%; margin-top: auto;">Actuellement indisponible</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="zone" id="zone">
+            <div class="container">
+                <h2>Zone d'intervention</h2>
+                <div class="zone-container">
+                    <div class="zone-content">
+                        <h3>Nous opérons à Fribourg et ses environs</h3>
+                        <p>SW Carcleaning couvre la région de Fribourg et les communes avoisinantes. Nous nous déplaçons à votre domicile pour vous offrir le meilleur service de lavage automobile. Horaires : 8h00 - 20h00 tous les jours.</p>
+                        <ul class="zone-list" style="margin-top: 24px; padding-left: 20px;">
+                            <li style="margin-bottom: 8px;">Fribourg-Ville</li>
+                            <li style="margin-bottom: 8px;">Communes alentour</li>
+                            <li style="margin-bottom: 8px;">Sur rendez-vous uniquement</li>
+                            <li style="margin-bottom: 8px;">08h00 - 20h00 tous les jours</li>
+                        </ul>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20êtes-vous%20présent%20dans%20ma%20zone%20?" target="_blank" class="btn btn-primary" style="margin-top: 24px;">Vérifier ma zone</a>
+                    </div>
+                    <div class="map-container">
+                        <iframe title="Carte de la zone de service SW Carcleaning" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2750.1900000001!2d7.1606100000000!3d46.80646000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478f32324e7c8e3f%3A0x7a7eac0f5f5f5f5f!2sFribourg%2C%20Suisse!5e0!3m2!1sfr!2sch!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Nous contacter</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis">+41 77 904 31 21</a></p>
+                        <p style="font-size: 12px; color: #999;">Réponse immédiate</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </div>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+41779043121">+41 77 904 31 21</a></p>
+                        <p style="font-size: 12px; color: #999;">8h00 - 20h00</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:s.wcarcleaning7@gmail.com">s.wcarcleaning7@gmail.com</a></p>
+                        <p style="font-size: 12px; color: #999;">Réponse sous 24h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h3>À propos</h3>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#tarifs">Tarifs</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Réseaux Sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/41779043121" class="social-wa" target="_blank" aria-label="Nous contacter sur WhatsApp" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/Swcarcleaning.ch" class="social-ig" target="_blank" aria-label="Notre page Instagram" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61591605397755" class="social-fb" target="_blank" aria-label="Notre page Facebook" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <a href="tel:+41779043121">📱 +41 77 904 31 21</a>
+                    <a href="mailto:s.wcarcleaning7@gmail.com">📧 s.wcarcleaning7@gmail.com</a>
+                    <a href="https://www.google.com/maps/place/Fribourg" target="_blank">📍 Fribourg, CH</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 SW Carcleaning. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <button onclick="openModal('modal-cgv')">Conditions Générales de Vente</button>
+                    <span>|</span>
+                    <button onclick="openModal('modal-privacy')">Politique de Confidentialité</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-cgv" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-cgv')">×</span>
+            <h2>Conditions Générales de Vente (CGV)</h2>
+            
+            <h3>1. Application des CGV</h3>
+            <p>Les présentes Conditions Générales de Vente s'appliquent à toutes les prestations de nettoyage et detailing automobile réalisées par SW Carcleaning auprès de ses clients. En réservant l'un de nos forfaits, le client accepte sans réserve ces conditions.</p>
+            
+            <h3>2. Prestations et Devis</h3>
+            <p>Les tarifs indiqués sur le site sont donnés à titre indicatif pour des véhicules de taille standard et dans un état d'encrassement normal. SW Carcleaning se réserve le droit d'ajuster le devis sur place avant le début de la prestation si le véhicule nécessite un traitement spécifique (poils d'animaux, boue extrême, etc.).</p>
+            
+            <h3>3. Tarifs et Paiement</h3>
+            <p>Tous nos prix sont indiqués en Francs Suisses (CHF). Le paiement s'effectue intégralement à la fin de la prestation, directement sur place, en espèces ou via l'application Twint.</p>
+            
+            <h3>4. Annulation de rendez-vous</h3>
+            <p>Toute annulation ou report de rendez-vous doit être signalé au moins 24 heures à l'avance. SW Carcleaning se réserve le droit de ne plus accepter de réservations en cas d'annulations abusives ou de non-présentation.</p>
+            
+            <h3>5. Responsabilités</h3>
+            <ul>
+                <li>Le client s'engage à vider son véhicule de tout objet personnel de valeur avant l'intervention.</li>
+                <li>SW Carcleaning décline toute responsabilité concernant les objets perdus ou endommagés laissés dans le véhicule.</li>
+                <li>Tout dommage préexistant sur la carrosserie (rayures, éclats de peinture) ou l'habitacle (déchirures, usure) sera signalé par nos soins avant le nettoyage. SW Carcleaning ne pourra être tenu responsable de l'aggravation de défauts préexistants dus au processus normal de nettoyage.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-privacy" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-privacy')">×</span>
+            <h2>Politique de Confidentialité</h2>
+            
+            <h3>1. Collecte des données personnelles</h3>
+            <p>Dans le cadre de nos prestations, SW Carcleaning est amené à collecter certaines données personnelles vous concernant (nom, prénom, numéro de téléphone, adresse e-mail, adresse de facturation/d'intervention). Ces données sont principalement recueillies lors de votre prise de contact via WhatsApp, par téléphone ou par e-mail.</p>
+            
+            <h3>2. Utilisation de vos données</h3>
+            <p>Les données collectées sont utilisées exclusivement dans le but de :</p>
+            <ul>
+                <li>Traiter et planifier vos demandes de devis et vos rendez-vous.</li>
+                <li>Se rendre sur le lieu d'intervention (votre domicile).</li>
+                <li>Assurer le service client et le suivi après prestation.</li>
+            </ul>
+            
+            <h3>3. Protection et partage des données</h3>
+            <p>SW Carcleaning s'engage à ne jamais vendre, louer ou céder vos données personnelles à des tiers à des fins commerciales. Vos informations sont stockées de manière sécurisée et ne sont accessibles qu'à l'équipe de SW Carcleaning pour le bon déroulement de la prestation.</p>
+            
+            <h3>4. Vos droits</h3>
+            <p>Conformément à la législation suisse sur la protection des données (LPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, il vous suffit de nous contacter à l'adresse e-mail : s.wcarcleaning7@gmail.com ou par téléphone au +41 77 904 31 21.</p>
+        </div>
+    </div>
+
+    <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Discuter avec nous sur WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        const header = document.getElementById('header');
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const progressBar = document.getElementById('progressBar');
+
+        /* Scroll Effect Header & Progress Bar */
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrollPercentage + '%';
+        });
+
+        /* Mobile Menu */
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        /* Smooth Scroll */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        /* Gestion des Modals (CGV / Confidentialité) */
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Empêche de scroller derrière le modal
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto'; // Réactive le scroll
+        }
+
+        // Fermer le modal en cliquant en dehors du contenu
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
