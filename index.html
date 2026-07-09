@@ -634,6 +634,22 @@
         .social-links svg { width: 22px; height: 22px; fill: currentColor; }
 
         .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 14px; color: #64748b; }
+        .footer-copy {
+            display: grid;
+            gap: 8px;
+        }
+        .site-credit {
+            color: #64748b;
+            font-size: 14px;
+        }
+        .site-credit a {
+            color: var(--whatsapp);
+            font-weight: 800;
+        }
+        .site-credit a:hover {
+            color: #5ff08d;
+            text-decoration: underline;
+        }
         .legal-links { display: flex; gap: 16px; }
         .legal-links button { background: none; border: none; color: #64748b; font-size: 14px; cursor: pointer; transition: var(--transition); padding: 0; font-family: inherit; }
         .legal-links button:hover { color: #ffffff; text-decoration: underline; }
@@ -687,6 +703,7 @@
             .question-card .btn { width: 100%; }
             .footer-inner { grid-template-columns: 1fr; gap: 36px; }
             .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .footer-copy { justify-items: center; }
             .legal-links { flex-wrap: wrap; justify-content: center; }
             .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
             .whatsapp-float svg { width: 30px; height: 30px; }
@@ -1066,7 +1083,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 SW Carcleaning. Tous droits réservés.</p>
+                <div class="footer-copy">
+                    <p>© 2026 SW Carcleaning. Tous droits réservés.</p>
+                    <p class="site-credit">Site réalisé par <a href="https://qualifyragence.com" target="_blank" rel="noopener noreferrer">Qualifyr</a></p>
+                </div>
                 <div class="legal-links">
                     <button type="button" onclick="openModal('modal-cgv')">Conditions Générales de Vente</button>
                     <span>|</span>

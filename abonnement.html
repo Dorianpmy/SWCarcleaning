@@ -378,6 +378,13 @@
 
         footer { padding: 34px 0; color: var(--muted); border-top: 1px solid var(--line); background: #ffffff; }
         .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+        .site-credit a {
+            color: var(--whatsapp);
+            font-weight: 800;
+        }
+        .site-credit a:hover {
+            text-decoration: underline;
+        }
         .wa-float {
             position: fixed;
             right: 22px;
@@ -724,7 +731,10 @@
 
     <footer>
         <div class="container footer-inner">
-            <p>© 2026 SW Carcleaning. Tous droits reserves.</p>
+            <div>
+                <p>© 2026 SW Carcleaning. Tous droits reserves.</p>
+                <p class="site-credit">Site réalisé par <a href="https://qualifyragence.com" target="_blank" rel="noopener noreferrer">Qualifyr</a></p>
+            </div>
             <p><a href="index.html">Retour au site</a> · <a href="mailto:s.wcarcleaning7@gmail.com">s.wcarcleaning7@gmail.com</a></p>
         </div>
     </footer>
