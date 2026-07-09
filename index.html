@@ -317,9 +317,10 @@
             border-radius: 18px;
             position: relative;
             overflow: hidden;
-            color: white;
-            background: linear-gradient(135deg, rgba(10, 17, 40, 0.92), rgba(0, 102, 255, 0.72));
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+            color: var(--dark);
+            background: linear-gradient(135deg, #ffffff 0%, #eaf3ff 100%);
+            border: 1px solid rgba(0, 102, 255, 0.18);
+            box-shadow: 0 18px 40px rgba(0, 102, 255, 0.10);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -328,48 +329,49 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 80% 10%, rgba(255,255,255,0.22), transparent 32%);
+            background: radial-gradient(circle at 80% 10%, rgba(0,102,255,0.16), transparent 34%);
             pointer-events: none;
         }
         .offer-tile span {
             align-self: flex-start;
             padding: 7px 10px;
             border-radius: 999px;
-            background: rgba(255,255,255,0.16);
+            background: var(--primary-light);
+            color: var(--primary);
             font-size: 12px;
             font-weight: 800;
             margin-bottom: auto;
         }
-        .offer-tile h3 { color: white; font-size: 24px; margin-bottom: 6px; }
-        .offer-tile p { color: rgba(255,255,255,0.82); font-weight: 600; line-height: 1.45; }
-        .offer-tile a { color: #ffffff; font-weight: 800; margin-top: 14px; }
+        .offer-tile h3 { color: var(--dark); font-size: 24px; margin-bottom: 6px; }
+        .offer-tile p { color: var(--text-muted); font-weight: 600; line-height: 1.45; }
+        .offer-tile a { color: var(--primary); font-weight: 800; margin-top: 14px; }
         .offer-tile.subscription {
-            background: linear-gradient(135deg, #0a1128, #17324f);
-            border: 1px solid rgba(250, 204, 21, 0.6);
+            background: linear-gradient(135deg, #ffffff 0%, #eef6ff 58%, #fff8d6 100%);
+            border: 1px solid rgba(0, 102, 255, 0.24);
         }
-        .offer-tile.subscription span { background: #facc15; color: #0a1128; }
+        .offer-tile.subscription span { background: #fff4b8; color: #7a5a00; }
 
         .formula-finder {
             margin: 56px auto 0;
             max-width: 760px;
             padding: 34px;
             border-radius: 22px;
-            background: rgba(10, 17, 40, 0.96);
-            color: white;
-            border: 1px solid rgba(250, 204, 21, 0.42);
-            box-shadow: 0 26px 60px rgba(15, 23, 42, 0.26);
+            background: #ffffff;
+            color: var(--dark);
+            border: 1px solid rgba(0, 102, 255, 0.18);
+            box-shadow: 0 26px 60px rgba(0, 102, 255, 0.12);
         }
         .finder-kicker {
             text-align: center;
-            color: #facc15;
+            color: var(--primary);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             font-size: 12px;
             margin-bottom: 8px;
         }
-        .formula-finder h3 { color: white; text-align: center; font-size: 30px; }
-        .formula-finder h3 span { color: #facc15; }
+        .formula-finder h3 { color: var(--dark); text-align: center; font-size: 30px; }
+        .formula-finder h3 span { color: var(--primary); }
         .finder-progress {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -379,14 +381,14 @@
         .finder-progress span {
             height: 5px;
             border-radius: 999px;
-            background: rgba(255,255,255,0.18);
+            background: var(--border);
         }
-        .finder-progress span.active { background: #facc15; }
+        .finder-progress span.active { background: var(--primary); }
         .finder-step { display: none; }
         .finder-step.active { display: block; animation: fadeInUpTitle 0.35s ease both; }
         .finder-question { text-align: center; margin-bottom: 18px; }
         .finder-question strong { display: block; font-size: 18px; }
-        .finder-question small { color: rgba(255,255,255,0.68); }
+        .finder-question small { color: var(--text-muted); }
         .finder-options {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -395,10 +397,10 @@
         .finder-option {
             min-height: 88px;
             padding: 16px;
-            border: 1px solid rgba(255,255,255,0.18);
+            border: 1px solid var(--border);
             border-radius: 16px;
-            background: rgba(255,255,255,0.06);
-            color: white;
+            background: #f8fbff;
+            color: var(--dark);
             text-align: left;
             font-family: inherit;
             cursor: pointer;
@@ -406,12 +408,13 @@
         }
         .finder-option:hover,
         .finder-option.selected {
-            border-color: #facc15;
-            background: rgba(250, 204, 21, 0.11);
+            border-color: var(--primary);
+            background: var(--primary-light);
             transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 102, 255, 0.12);
         }
         .finder-option strong { display: block; font-size: 16px; margin-bottom: 3px; }
-        .finder-option small { color: rgba(255,255,255,0.68); }
+        .finder-option small { color: var(--text-muted); }
         .finder-result {
             display: none;
             text-align: center;
@@ -421,22 +424,22 @@
             display: inline-flex;
             padding: 7px 12px;
             border-radius: 999px;
-            background: rgba(250, 204, 21, 0.18);
-            color: #facc15;
+            background: var(--primary-light);
+            color: var(--primary);
             font-weight: 900;
             margin-bottom: 12px;
         }
-        .result-price { font-size: 44px; font-weight: 900; color: #facc15; line-height: 1; margin: 10px 0; }
+        .result-price { font-size: 44px; font-weight: 900; color: var(--primary); line-height: 1; margin: 10px 0; }
         .result-list { list-style: none; margin: 20px auto; max-width: 430px; text-align: left; }
-        .result-list li { margin: 8px 0; color: rgba(255,255,255,0.86); }
-        .result-list li::before { content: '✓'; color: #facc15; font-weight: 900; margin-right: 8px; }
+        .result-list li { margin: 8px 0; color: var(--text-muted); }
+        .result-list li::before { content: '✓'; color: var(--primary); font-weight: 900; margin-right: 8px; }
         .finder-actions { display: grid; gap: 10px; margin-top: 18px; }
         .btn-yellow {
-            background: #facc15;
-            color: #0a1128;
-            box-shadow: 0 12px 28px rgba(250, 204, 21, 0.26);
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 12px 28px rgba(0, 102, 255, 0.24);
         }
-        .btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(250, 204, 21, 0.34); }
+        .btn-yellow:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(0, 102, 255, 0.32); }
 
         .zone { background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); overflow: hidden; }
         .zone-container { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: center; margin-top: 48px; }
@@ -810,10 +813,10 @@
                             <small>Chaque catégorie a un tarif adapté.</small>
                         </div>
                         <div class="finder-options">
-                            <button class="finder-option" data-value="Citadine" data-price="49.95"><strong>Citadine</strong><small>Clio, 208, Polo...</small></button>
-                            <button class="finder-option" data-value="Berline / SUV" data-price="59.95"><strong>Berline / SUV</strong><small>Classe C, Q3, 3008...</small></button>
-                            <button class="finder-option" data-value="Prestige" data-price="Sur devis"><strong>Prestige</strong><small>Porsche, AMG, Tesla...</small></button>
-                            <button class="finder-option" data-value="Monospace / Utilitaire" data-price="Sur devis"><strong>Monospace / Utilitaire</strong><small>Van, fourgon, 7 places...</small></button>
+                            <button class="finder-option" data-value="Citadine" data-price="49.95"><strong>🚗 Citadine</strong><small>Clio, 208, Polo...</small></button>
+                            <button class="finder-option" data-value="Berline / SUV" data-price="59.95"><strong>🚙 Berline / SUV</strong><small>Classe C, Q3, 3008...</small></button>
+                            <button class="finder-option" data-value="Prestige" data-price="Sur devis"><strong>🏎️ Prestige</strong><small>Porsche, AMG, Tesla...</small></button>
+                            <button class="finder-option" data-value="Monospace / Utilitaire" data-price="Sur devis"><strong>🚐 Monospace / Utilitaire</strong><small>Van, fourgon, 7 places...</small></button>
                         </div>
                     </div>
 
