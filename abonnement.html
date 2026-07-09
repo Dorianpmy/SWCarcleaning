@@ -393,16 +393,76 @@
             box-shadow: 0 16px 38px rgba(37, 211, 102, 0.35);
             z-index: 10;
         }
+        .mobile-call {
+            display: none;
+            color: #0f8f43;
+            font-size: 13px;
+            font-weight: 800;
+        }
 
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 860px) {
-            .nav { height: auto; min-height: 72px; align-items: flex-start; padding: 14px 0; flex-direction: column; }
-            .nav-links { width: 100%; overflow-x: auto; padding-bottom: 2px; }
-            .reserve-btn { width: 100%; }
-            .hero { min-height: auto; padding: 62px 0 48px; }
+            .container { width: min(100% - 32px, 1160px); }
+            .topbar { position: relative; }
+            .nav {
+                height: auto;
+                min-height: 0;
+                align-items: stretch;
+                padding: 18px 0;
+                flex-direction: column;
+                gap: 14px;
+            }
+            .logo {
+                font-size: 27px;
+                line-height: 1.1;
+            }
+            .nav-links {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                gap: 8px;
+                overflow: visible;
+                padding-bottom: 0;
+            }
+            .nav-links a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 46px;
+                padding: 10px 12px;
+                border: 1px solid var(--line);
+                background: #ffffff;
+                text-align: center;
+                line-height: 1.2;
+                white-space: normal;
+                box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+            }
+            .nav-links .active {
+                grid-column: 1 / -1;
+                min-height: 50px;
+            }
+            .nav-links .phone-link { display: none; }
+            .mobile-call { display: inline-flex; align-items: center; justify-content: center; }
+            .reserve-btn {
+                width: 100%;
+                min-height: 54px;
+                border-radius: 16px;
+                font-size: 17px;
+            }
+            .hero { min-height: auto; padding: 44px 0 42px; }
             .hero-actions .btn { width: 100%; }
+            h1 { font-size: 38px; line-height: 1.08; }
+            .hero p { font-size: 16px; line-height: 1.7; }
+            .proof-row { gap: 10px; }
+            .proof-row span {
+                width: 100%;
+                padding: 10px 12px;
+                border-radius: 12px;
+                background: #ffffff;
+                border: 1px solid var(--line);
+            }
             .benefit-grid,
             .plan-grid,
             .monthly-grid,
@@ -411,8 +471,28 @@
             .monthly-prices { grid-template-columns: 1fr; }
             .contract-card,
             .monthly-panel { padding: 18px; }
-            section { padding: 58px 0; }
-            h1 { font-size: 42px; }
+            section { padding: 52px 0; }
+            .benefit { padding: 22px; }
+            .section-head { margin-bottom: 28px; }
+            h2 { font-size: 34px; }
+            .section-head p { font-size: 15px; line-height: 1.65; }
+            .vehicle-tabs {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-bottom: 24px;
+            }
+            .vehicle-tabs button {
+                min-height: 50px;
+                padding: 0 12px;
+                font-size: 15px;
+            }
+            .vehicle-tabs button:last-child { grid-column: 1 / -1; }
+            .plan-card { padding: 24px; }
+            .price { font-size: 42px; }
+            .saving { font-size: 20px; }
+            .monthly-price { min-height: 110px; }
+            .wa-float { display: none; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -429,9 +509,10 @@
                 <a href="index.html#tarifs">Particuliers</a>
                 <a class="whatsapp-link" href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20entreprise" target="_blank" rel="noopener noreferrer">Entreprises</a>
                 <a href="#forfaits" class="active">👑 Abonnements</a>
-                <a href="tel:+41779043121">+41 77 904 31 21</a>
+                <a class="phone-link" href="tel:+41779043121">+41 77 904 31 21</a>
             </nav>
             <a class="reserve-btn" href="#contrat">Souscrire</a>
+            <a class="mobile-call" href="tel:+41779043121">Appeler SW Carcleaning: +41 77 904 31 21</a>
         </div>
     </header>
 
