@@ -7,20 +7,22 @@
     <meta name="author" content="SW Carcleaning">
     <meta name="copyright" content="SW Carcleaning © 2026">
     
-    <title>Lavage Auto & Detailing à Domicile Fribourg | SW Carcleaning</title>
-    <meta name="description" content="Lavage auto et detailing à domicile à Fribourg. Nettoyage intérieur et extérieur 100% à la main, dès 49.95 CHF. Devis rapide via WhatsApp.">
-    <meta name="keywords" content="lavage auto fribourg, detailing fribourg, nettoyage voiture domicile, car cleaning suisse, lavage professionnel fribourg, nettoyage carrosserie fribourg, cgv, politique de confidentialité, mentions légales, forfait intérieur et extérieur de nettoyage, lavage auto professionnel, nettoyage auto à domicile, detailing voiture à domicile, forfait de lavage extérieur">
+    <title>Nettoyage Intérieur Voiture à Domicile Fribourg | SW Carcleaning</title>
+    <meta name="description" content="Nettoyage intérieur de voiture à domicile à Fribourg : 69 CHF. Detailing intérieur en profondeur : 170 CHF. Détachage à l'injecteur-extracteur sur devis. Réservation via WhatsApp.">
+    <meta name="keywords" content="nettoyage intérieur voiture fribourg, detailing intérieur fribourg, nettoyage voiture domicile, nettoyage sièges voiture, détachage siège voiture, injecteur extracteur, shampoing moquette voiture, car cleaning suisse, nettoyage auto à domicile, detailing voiture à domicile">
     
     <link rel="canonical" href="https://www.swcarcleaning.ch/">
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.swcarcleaning.ch/">
-    <meta property="og:title" content="SW Carcleaning | Lavage Auto & Detailing à Domicile">
-    <meta property="og:description" content="Service de nettoyage voiture premium à Fribourg. 100% à la main, sans micro-rayures.">
+    <meta property="og:title" content="SW Carcleaning | Nettoyage intérieur de voiture à domicile">
+    <meta property="og:description" content="Nettoyage intérieur 69 CHF, detailing intérieur 170 CHF, détachage à l'injecteur-extracteur sur devis. À domicile à Fribourg.">
+    <meta property="og:image" content="https://www.swcarcleaning.ch/images/og-sw-car-cleaning.jpg">
     <meta property="og:locale" content="fr_CH">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SW Carcleaning | Lavage Auto & Detailing à Domicile">
-    <meta name="twitter:description" content="Nettoyage auto à domicile à Fribourg, 100% à la main, dès 49.95 CHF.">
+    <meta name="twitter:title" content="SW Carcleaning | Nettoyage intérieur de voiture à domicile">
+    <meta name="twitter:description" content="Nettoyage intérieur de voiture à domicile à Fribourg, 69 CHF.">
+    <meta name="twitter:image" content="https://www.swcarcleaning.ch/images/og-sw-car-cleaning.jpg">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -28,6 +30,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoWash",
+        "name": "SW Carcleaning",
+        "url": "https://www.swcarcleaning.ch/",
+        "telephone": "+41779043121",
+        "email": "s.wcarcleaning7@gmail.com",
+        "priceRange": "69–170 CHF",
+        "address": { "@type": "PostalAddress", "addressLocality": "Fribourg", "addressCountry": "CH" },
+        "areaServed": ["Fribourg", "Villars-sur-Glâne", "Marly", "Givisiez", "Granges-Paccot"],
+        "openingHours": "Mo-Su 08:00-20:00",
+        "paymentAccepted": "Twint, Cash",
+        "makesOffer": [
+            { "@type": "Offer", "name": "Nettoyage intérieur", "price": "69", "priceCurrency": "CHF" },
+            { "@type": "Offer", "name": "Detailing intérieur", "price": "170", "priceCurrency": "CHF" }
+        ]
+    }
+    </script>
     
     <style>
         :root {
@@ -168,8 +190,26 @@
             font-size: 15px;
         }
         .trust-icon {
-            font-size: 24px;
+            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
         }
+        .trust-icon svg, .feature-badge svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .feature-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            padding: 18px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            transition: var(--transition-slow);
+        }
+        .feature-card:hover .feature-badge { background: var(--primary); color: #ffffff; transform: scale(1.08); }
 
         .proof {
             background: #ffffff;
@@ -177,7 +217,7 @@
         }
         .proof-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .proof-card {
@@ -302,8 +342,79 @@
         .price-list { list-style: none; margin: 32px 0; text-align: left; flex-grow: 1; }
         .price-list li { padding: 10px 0; border-bottom: 1px solid var(--border); color: var(--text-main); font-size: 14px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
         .price-list li:last-child { border-bottom: none; }
-        .price-list li:before { content: '✓'; color: var(--primary); font-weight: 800; font-size: 16px; flex-shrink: 0; }
+        .price-list li:before { content: ''; width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; margin-top: -1px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px no-repeat, linear-gradient(135deg, var(--primary) 0%, #00b4ff 100%); box-shadow: 0 4px 10px rgba(0, 102, 255, 0.28); }
         .price-card.disabled .price-list li:before { color: var(--text-muted); }
+        .price-card h3 { font-size: 22px; margin-bottom: 0; }
+        .price-value.price-quote { font-size: 40px; }
+        .price-card .btn { width: 100%; }
+
+        /* PRICE CARDS: WOW EFFECTS */
+        @property --angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+        @keyframes spinBorder { to { --angle: 360deg; } }
+        @keyframes checkPop {
+            0% { transform: scale(0) rotate(-60deg); }
+            60% { transform: scale(1.3) rotate(10deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+        @keyframes shine { from { transform: translateX(-130%) skewX(-20deg); } to { transform: translateX(330%) skewX(-20deg); } }
+
+        .price-card { overflow: hidden; }
+        .price-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+            transform: translateX(-130%) skewX(-20deg);
+            pointer-events: none;
+        }
+        .price-card:hover::after { animation: shine 0.9s ease; }
+
+        .pricing-grid .price-card.featured {
+            border-color: transparent;
+            background:
+                linear-gradient(#ffffff, #ffffff) padding-box,
+                conic-gradient(from var(--angle), #0066ff, #00d2ff, #a5f3fc, #0066ff 55%, #0066ff) border-box;
+            animation: spinBorder 4s linear infinite;
+            box-shadow: 0 24px 50px rgba(0, 102, 255, 0.22);
+        }
+        .card-ribbon {
+            position: absolute;
+            top: 22px;
+            right: -38px;
+            z-index: 2;
+            padding: 6px 44px;
+            transform: rotate(35deg);
+            background: linear-gradient(135deg, var(--primary) 0%, #00b4ff 100%);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            box-shadow: 0 6px 14px rgba(0, 102, 255, 0.3);
+        }
+        .card-ribbon.ribbon-offer {
+            background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+            color: #422006;
+            box-shadow: 0 6px 14px rgba(245, 158, 11, 0.35);
+        }
+
+        .count { font: inherit; color: inherit; font-variant-numeric: tabular-nums; }
+
+        .price-card.reveal .price-list li {
+            opacity: 0;
+            transform: translateX(-14px);
+            transition: opacity 0.45s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+            transition-delay: calc(var(--reveal-delay, 0ms) + 450ms + var(--i, 0) * 170ms);
+        }
+        .price-card.reveal .price-list li::before { transform: scale(0); }
+        .price-card.reveal.is-visible .price-list li { opacity: 1; transform: none; }
+        .price-card.reveal.is-visible .price-list li::before {
+            animation: checkPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+            animation-delay: calc(var(--reveal-delay, 0ms) + 520ms + var(--i, 0) * 170ms);
+        }
+
+        .pricing-note { margin: 28px auto 0; max-width: 760px; text-align: center; color: var(--text-muted); font-size: 14px; }
 
         .offer-board {
             display: grid;
@@ -759,6 +870,9 @@
                 opacity: 1;
                 transform: none;
             }
+            .price-card.reveal .price-list li { opacity: 1; transform: none; transition: none; }
+            .price-card.reveal .price-list li::before,
+            .price-card.reveal.is-visible .price-list li::before { transform: none; animation: none; }
         }
     </style>
 </head>
@@ -794,19 +908,19 @@
         <section class="hero" id="accueil">
             <div class="container">
                 <div class="hero-content">
-                    <div class="badge">Service premium à domicile</div>
-                    <h1>Lavage auto et detailing <span>professionnel à Fribourg</span></h1>
-                    <p>SW Carcleaning nettoie votre voiture directement chez vous, à la main, avec des méthodes soignées qui protègent la carrosserie et l'habitacle.</p>
+                    <div class="badge">Spécialiste du nettoyage intérieur</div>
+                    <h1>Nettoyage intérieur de voiture <span>à domicile à Fribourg</span></h1>
+                    <p>Sièges, moquettes, plastiques, vitres et coffre : SW Carcleaning nettoie l'habitacle de votre voiture directement chez vous, à la main, recoin par recoin.</p>
                     <div class="hero-actions">
-                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20gratuit" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Demander un devis via WhatsApp">
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20r%C3%A9server%20un%20nettoyage%20int%C3%A9rieur" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Réserver via WhatsApp">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                            Devis gratuit WhatsApp
+                            Réserver sur WhatsApp
                         </a>
                         <a href="#tarifs" class="btn btn-secondary">Découvrir nos tarifs</a>
                     </div>
                     <div class="hero-proof" aria-label="Informations clés">
                         <span>Fribourg et alentours</span>
-                        <span>Dès 49.95 CHF</span>
+                        <span>Nettoyage intérieur 69 CHF</span>
                         <span>Twint ou espèces</span>
                     </div>
                 </div>
@@ -815,15 +929,15 @@
 
         <div class="trust-badges">
             <div class="trust-item">
-                <span class="trust-icon" aria-hidden="true">💳</span>
+                <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg></span>
                 Paiement sur place (Twint / Espèces)
             </div>
             <div class="trust-item">
-                <span class="trust-icon" aria-hidden="true">🌱</span>
+                <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
                 Produits écologiques & respectueux
             </div>
             <div class="trust-item">
-                <span class="trust-icon" aria-hidden="true">📅</span>
+                <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>
                 Sur rendez-vous, 8h00 - 20h00
             </div>
         </div>
@@ -838,11 +952,7 @@
                     </div>
                     <div class="proof-card">
                         <strong>Prix affiché</strong>
-                        <p>Le forfait de base est visible dès le départ. Les ajustements éventuels sont annoncés avant la prestation.</p>
-                    </div>
-                    <div class="proof-card">
-                        <strong>Travail à la main</strong>
-                        <p>Pré-lavage, lavage, séchage et finitions sont réalisés avec soin, sans passage en station automatique.</p>
+                        <p>69 CHF le nettoyage intérieur, 170 CHF le detailing intérieur. Les ajustements éventuels sont annoncés avant la prestation.</p>
                     </div>
                     <div class="proof-card">
                         <strong>À domicile</strong>
@@ -857,19 +967,19 @@
                 <h2>Pourquoi choisir SW Carcleaning ?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🎯</div>
+                        <div class="feature-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
                         <h3>Service à domicile</h3>
                         <p>Nous venons directement chez vous à Fribourg et alentours. Pas besoin de vous déplacer ou d'attendre en station.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">✋</div>
-                        <h3>100% à la main</h3>
-                        <p>Lavage professionnel entièrement manuel, avec des gestes précis pour limiter les risques de micro-rayures.</p>
+                        <div class="feature-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4M22 5h-4"/></svg></div>
+                        <h3>Spécialiste de l'intérieur</h3>
+                        <p>Sièges, moquettes, tapis, plastiques, vitres et coffre : l'habitacle est nettoyé à la main, jusque dans les recoins.</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">💎</div>
-                        <h3>Detailing Premium</h3>
-                        <p>Produits sélectionnés, finitions soignées et attention portée aux détails visibles de votre véhicule.</p>
+                        <div class="feature-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+                        <h3>Détachage en profondeur</h3>
+                        <p>Une tache sur un siège ou une moquette ? On la traite à l'injecteur-extracteur, qui nettoie le tissu en profondeur.</p>
                     </div>
                 </div>
             </div>
@@ -877,13 +987,57 @@
 
         <section class="pricing" id="tarifs">
             <div class="container">
-                <h2>Trouvez votre formule</h2>
-                <div class="offer-board" aria-label="Accès rapides aux offres">
-                    <article class="offer-tile">
-                        <span>Dès 49.95 CHF</span>
-                        <h3>Particuliers</h3>
-                        <p>Un nettoyage ponctuel à domicile, intérieur et extérieur selon le besoin.</p>
-                        <a href="#formule">Trouver ma formule →</a>
+                <h2>Nos formules</h2>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <span class="card-ribbon ribbon-offer">Offre spéciale</span>
+                        <div><span class="price-duration">L'entretien complet</span></div>
+                        <h3>Nettoyage intérieur</h3>
+                        <div class="price-value"><strong class="count" data-to="69">69</strong> <span>CHF</span></div>
+                        <ul class="price-list">
+                            <li>Aspiration des sièges, moquettes, tapis et coffre</li>
+                            <li>Tableau de bord, console et plastiques nettoyés</li>
+                            <li>Vitres et rétroviseur intérieurs</li>
+                            <li>Tapis de sol nettoyés</li>
+                            <li>Déplacement à Fribourg et alentours</li>
+                        </ul>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20r%C3%A9server%20le%20nettoyage%20int%C3%A9rieur%20%2869%20CHF%29." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Réserver</a>
+                    </div>
+                    <div class="price-card active featured">
+                        <span class="card-ribbon">Le plus complet</span>
+                        <div><span class="price-duration">Nettoyage en profondeur</span></div>
+                        <h3>Detailing intérieur</h3>
+                        <div class="price-value"><strong class="count" data-to="170">170</strong> <span>CHF</span></div>
+                        <ul class="price-list">
+                            <li>Tout le nettoyage intérieur</li>
+                            <li>Sièges et moquettes nettoyés en profondeur</li>
+                            <li>Aérations, joints, rails de sièges et recoins</li>
+                            <li>Panneaux de portes et ceintures</li>
+                            <li>Déplacement à Fribourg et alentours</li>
+                        </ul>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20r%C3%A9server%20le%20detailing%20int%C3%A9rieur%20%28170%20CHF%29." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Réserver</a>
+                    </div>
+                    <div class="price-card">
+                        <div><span class="price-duration">Intérieur + extérieur</span></div>
+                        <h3>Formule complète</h3>
+                        <div class="price-value price-quote">Sur devis</div>
+                        <ul class="price-list">
+                            <li>Nettoyage intérieur + extérieur</li>
+                            <li>Detailing intérieur + extérieur</li>
+                            <li>Carrosserie lavée à la main</li>
+                            <li>Prix selon le véhicule et son état</li>
+                        </ul>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20pour%20un%20nettoyage%20int%C3%A9rieur%20%2B%20ext%C3%A9rieur." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Demander un devis</a>
+                    </div>
+                </div>
+                <p class="pricing-note">Prix pour une voiture de taille standard. Monospace, utilitaire ou intérieur très sale (poils d'animaux, boue) : envoyez une photo, le prix vous est confirmé avant la prestation.</p>
+
+                <div class="offer-board" aria-label="Offres complémentaires">
+                    <article class="offer-tile subscription">
+                        <span>Offre spéciale</span>
+                        <h3>Détachage à l'injecteur-extracteur</h3>
+                        <p>Une tache sur un siège ou une moquette ? Elle est traitée en profondeur. Sur devis.</p>
+                        <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20j%27ai%20une%20tache%20%C3%A0%20faire%20traiter%20%C3%A0%20l%27injecteur-extracteur.%20Je%20vous%20envoie%20une%20photo." target="_blank" rel="noopener noreferrer">Envoyer une photo de la tache →</a>
                     </article>
                     <article class="offer-tile">
                         <span>Sur devis</span>
@@ -891,7 +1045,7 @@
                         <p>Flottes, véhicules de service, concessions et interventions récurrentes.</p>
                         <a href="https://wa.me/41779043121?text=Bonjour%20SW%20Carcleaning%2C%20je%20souhaite%20un%20devis%20entreprise" target="_blank" rel="noopener noreferrer">Espace pro →</a>
                     </article>
-                    <article class="offer-tile subscription">
+                    <article class="offer-tile">
                         <span>Abonnements</span>
                         <h3>Entretien régulier</h3>
                         <p>Forfaits mensuels ou annuels, contrat suisse à valider, prix garanti.</p>
@@ -911,13 +1065,13 @@
                     <div class="finder-step active" data-step="1">
                         <div class="finder-question">
                             <strong>Quel est votre type de véhicule ?</strong>
-                            <small>Chaque catégorie a un tarif adapté.</small>
+                            <small>Pour savoir si le tarif standard s'applique.</small>
                         </div>
                         <div class="finder-options">
-                            <button class="finder-option" data-value="Citadine" data-price="49.95"><strong>🚗 Citadine</strong><small>Clio, 208, Polo...</small></button>
-                            <button class="finder-option" data-value="Berline / SUV" data-price="59.95"><strong>🚙 Berline / SUV</strong><small>Classe C, Q3, 3008...</small></button>
-                            <button class="finder-option" data-value="Prestige" data-price="Sur devis"><strong>🏎️ Prestige</strong><small>Porsche, AMG, Tesla...</small></button>
-                            <button class="finder-option" data-value="Monospace / Utilitaire" data-price="Sur devis"><strong>🚐 Monospace / Utilitaire</strong><small>Van, fourgon, 7 places...</small></button>
+                            <button class="finder-option" data-value="Citadine" data-price="standard"><strong>Citadine</strong><small>Clio, 208, Polo...</small></button>
+                            <button class="finder-option" data-value="Berline / SUV" data-price="standard"><strong>Berline / SUV</strong><small>Classe C, Q3, 3008...</small></button>
+                            <button class="finder-option" data-value="Prestige" data-price="Sur devis"><strong>Prestige</strong><small>Porsche, AMG, Tesla...</small></button>
+                            <button class="finder-option" data-value="Monospace / Utilitaire" data-price="Sur devis"><strong>Monospace / Utilitaire</strong><small>Van, fourgon, 7 places...</small></button>
                         </div>
                     </div>
 
@@ -939,19 +1093,20 @@
                             <small>On s'adapte à votre besoin.</small>
                         </div>
                         <div class="finder-options">
-                            <button class="finder-option" data-value="Intérieur"><strong>Intérieur</strong><small>Sièges, plastiques, vitres</small></button>
-                            <button class="finder-option" data-value="Extérieur"><strong>Extérieur</strong><small>Carrosserie, jantes, pneus</small></button>
-                            <button class="finder-option" data-value="Intérieur + Extérieur"><strong>Int. + Ext.</strong><small>Le combo gagnant</small></button>
+                            <button class="finder-option" data-value="Nettoyage intérieur"><strong>Nettoyage intérieur</strong><small>Aspiration, plastiques, vitres</small></button>
+                            <button class="finder-option" data-value="Detailing intérieur"><strong>Detailing intérieur</strong><small>Nettoyage en profondeur</small></button>
+                            <button class="finder-option" data-value="Intérieur + Extérieur"><strong>Int. + Ext.</strong><small>Habitacle et carrosserie</small></button>
+                            <button class="finder-option" data-value="Tache spécifique"><strong>Tache spécifique</strong><small>Injecteur-extracteur</small></button>
                         </div>
                     </div>
 
                     <div class="finder-result" id="finderResult">
                         <span class="result-pill">On vous recommande</span>
-                        <h3 id="resultTitle">Nettoyage de Base</h3>
-                        <div class="result-price" id="resultPrice">49.95 CHF</div>
-                        <ul class="result-list">
-                            <li>Aspiration habitacle</li>
-                            <li>Lavage à la main selon la formule choisie</li>
+                        <h3 id="resultTitle">Nettoyage intérieur</h3>
+                        <div class="result-price" id="resultPrice">69 CHF</div>
+                        <ul class="result-list" id="resultList">
+                            <li>Aspiration des sièges, moquettes et coffre</li>
+                            <li>Plastiques et vitres intérieures</li>
                             <li>Déplacement à Fribourg et alentours</li>
                             <li>Paiement sur place Twint ou espèces</li>
                         </ul>
@@ -971,7 +1126,7 @@
                 <div class="zone-container">
                     <div class="zone-content">
                         <h3>Nous opérons à Fribourg et ses environs</h3>
-                        <p>SW Carcleaning couvre la région de Fribourg et les communes avoisinantes. Nous nous déplaçons à votre domicile pour vous offrir le meilleur service de lavage automobile. Horaires : 8h00 - 20h00 tous les jours.</p>
+                        <p>SW Carcleaning couvre la région de Fribourg et les communes avoisinantes. Nous nous déplaçons à votre domicile pour nettoyer l'intérieur de votre voiture sur place. Horaires : 8h00 - 20h00 tous les jours.</p>
                         <div class="zone-chips" aria-label="Zones et conditions d'intervention">
                             <span class="zone-chip">Fribourg-Ville</span>
                             <span class="zone-chip">Villars-sur-Glâne</span>
@@ -1050,7 +1205,7 @@
             <div class="footer-inner">
                 <div class="footer-brand">
                     <div class="footer-signature" aria-label="Signature SW Carcleaning">SW Carcleaning</div>
-                    <p>Lavage automobile et detailing à domicile à Fribourg et alentours. Un service soigné, clair et flexible pour garder votre véhicule propre sans vous déplacer.</p>
+                    <p>Nettoyage intérieur et detailing automobile à domicile à Fribourg et alentours. Un service soigné, clair et flexible pour retrouver un habitacle propre sans vous déplacer.</p>
                     <div class="social-links">
                         <a href="https://wa.me/41779043121" class="social-wa" target="_blank" aria-label="Nous contacter sur WhatsApp" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1105,7 +1260,7 @@
             <p>Les présentes Conditions Générales de Vente s'appliquent à toutes les prestations de nettoyage et detailing automobile réalisées par SW Carcleaning auprès de ses clients. En réservant l'un de nos forfaits, le client accepte sans réserve ces conditions.</p>
             
             <h3>2. Prestations et Devis</h3>
-            <p>Les tarifs indiqués sur le site sont donnés à titre indicatif pour des véhicules de taille standard et dans un état d'encrassement normal. SW Carcleaning se réserve le droit d'ajuster le devis sur place avant le début de la prestation si le véhicule nécessite un traitement spécifique (poils d'animaux, boue extrême, etc.).</p>
+            <p>Les tarifs indiqués (nettoyage intérieur : 69 CHF, detailing intérieur : 170 CHF) s'appliquent à des véhicules de taille standard et dans un état d'encrassement normal. Les prestations intérieur + extérieur et le détachage à l'injecteur-extracteur sont établis sur devis. SW Carcleaning se réserve le droit d'ajuster le prix avant le début de la prestation si le véhicule nécessite un traitement spécifique (poils d'animaux, boue extrême, etc.) ; tout ajustement est annoncé avant le début du travail.</p>
             
             <h3>3. Tarifs et Paiement</h3>
             <p>Tous nos prix sont indiqués en Francs Suisses (CHF). Le paiement s'effectue intégralement à la fin de la prestation, directement sur place, en espèces ou via l'application Twint.</p>
@@ -1194,6 +1349,7 @@
         const revealGroups = [
             ['.proof-card', 'reveal reveal-scale'],
             ['.feature-card', 'reveal reveal-scale'],
+            ['.price-card', 'reveal reveal-scale'],
             ['.offer-tile', 'reveal reveal-scale'],
             ['.formula-finder', 'reveal reveal-scale'],
             ['.question-card', 'reveal reveal-scale'],
@@ -1202,6 +1358,27 @@
             ['.zone-content', 'reveal reveal-left'],
             ['.map-container', 'reveal reveal-right']
         ];
+
+        document.querySelectorAll('.price-list').forEach(list => {
+            list.querySelectorAll('li').forEach((item, index) => item.style.setProperty('--i', index));
+        });
+
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function countUp(element) {
+            const target = Number(element.dataset.to);
+            if (reduceMotion || !target) return;
+            const duration = 1100;
+            const start = performance.now();
+            const tick = now => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                element.textContent = Math.round(target * eased);
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+            element.textContent = '0';
+            requestAnimationFrame(tick);
+        }
 
         revealGroups.forEach(([selector, classes]) => {
             document.querySelectorAll(selector).forEach((element, index) => {
@@ -1215,6 +1392,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
+                        entry.target.querySelectorAll('.count').forEach(countUp);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -1228,9 +1406,30 @@
         /* Assistant de recommandation */
         const finder = {
             step: 1,
-            answers: {},
-            basePrice: 49.95
+            answers: {}
         };
+
+        const FORMULAS = {
+            'Nettoyage intérieur': {
+                price: 69,
+                items: ['Aspiration des sièges, moquettes et coffre', 'Plastiques et vitres intérieures']
+            },
+            'Detailing intérieur': {
+                price: 170,
+                items: ['Nettoyage intérieur en profondeur', 'Sièges, moquettes, aérations et recoins']
+            },
+            'Intérieur + Extérieur': {
+                price: null,
+                title: 'Formule intérieur + extérieur',
+                items: ['Habitacle et carrosserie', 'Prix selon le véhicule et son état']
+            },
+            'Tache spécifique': {
+                price: null,
+                title: "Détachage à l'injecteur-extracteur",
+                items: ['Tache traitée en profondeur', 'Envoyez une photo de la tache pour le devis']
+            }
+        };
+        const COMMON_ITEMS = ['Déplacement à Fribourg et alentours', 'Paiement sur place Twint ou espèces'];
 
         const formulaFinder = document.getElementById('formule');
         const finderSteps = document.querySelectorAll('.finder-step');
@@ -1240,6 +1439,7 @@
         const resultPrice = document.getElementById('resultPrice');
         const resultWhatsapp = document.getElementById('resultWhatsapp');
         const restartFinder = document.getElementById('restartFinder');
+        const resultList = document.getElementById('resultList');
 
         function showFinderStep(step) {
             finder.step = step;
@@ -1252,25 +1452,25 @@
             const vehicle = finder.answers.vehicle;
             const dirt = finder.answers.dirt;
             const cleaning = finder.answers.cleaning;
-            const needsQuote = finder.answers.basePrice === 'Sur devis' || dirt === 'Très sale';
-            const cleaningExtra = cleaning === 'Intérieur + Extérieur' ? 30 : cleaning === 'Extérieur' ? 15 : 0;
-            const dirtExtra = dirt === 'Moyen' ? 15 : 0;
+            const formula = FORMULAS[cleaning];
+            const title = formula.title || cleaning;
+            const needsQuote = formula.price === null || finder.answers.basePrice === 'Sur devis' || dirt === 'Très sale';
+            const items = formula.items.concat(COMMON_ITEMS);
 
             if (needsQuote) {
                 return {
-                    title: 'Devis personnalisé',
+                    title,
                     price: 'Sur devis',
-                    message: `Bonjour SW Carcleaning, je souhaite un devis pour ${vehicle}, niveau ${dirt}, nettoyage ${cleaning}.`
+                    items,
+                    message: `Bonjour SW Carcleaning, je souhaite un devis pour : ${title}. Véhicule : ${vehicle}. Saleté : ${dirt}.`
                 };
             }
 
-            const price = Number(finder.answers.basePrice) + cleaningExtra + dirtExtra;
-            const title = cleaning === 'Intérieur + Extérieur' ? 'Formule complète' : `Nettoyage ${cleaning.toLowerCase()}`;
-
             return {
                 title,
-                price: `${price.toFixed(2)} CHF`,
-                message: `Bonjour SW Carcleaning, je souhaite réserver: ${title}. Véhicule: ${vehicle}. Saleté: ${dirt}. Nettoyage: ${cleaning}. Prix indicatif: ${price.toFixed(2)} CHF.`
+                price: `${formula.price} CHF`,
+                items,
+                message: `Bonjour SW Carcleaning, je souhaite réserver : ${title} (${formula.price} CHF). Véhicule : ${vehicle}. Saleté : ${dirt}.`
             };
         }
 
@@ -1280,6 +1480,11 @@
             const recommendation = getRecommendation();
             resultTitle.textContent = recommendation.title;
             resultPrice.textContent = recommendation.price;
+            resultList.replaceChildren(...recommendation.items.map(text => {
+                const li = document.createElement('li');
+                li.textContent = text;
+                return li;
+            }));
             resultWhatsapp.href = `https://wa.me/41779043121?text=${encodeURIComponent(recommendation.message)}`;
             finderResult.classList.add('active');
         }
