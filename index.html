@@ -431,6 +431,81 @@
         .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 12px 30px rgba(0, 102, 255, 0.1); }
         .feature-icon { font-size: 48px; margin-bottom: 16px; display: block; }
 
+        /* AVANT / APRÈS */
+        .before-after { background: #ffffff; }
+        .before-after h2 { margin-bottom: 12px; }
+        .ba-intro { text-align: center; color: var(--text-muted); font-size: 17px; margin: 0 auto 32px; max-width: 560px; }
+        .ba {
+            --pos: 50%;
+            position: relative;
+            max-width: 840px;
+            margin: 0 auto;
+            aspect-ratio: 4 / 3;
+            border-radius: 22px;
+            overflow: hidden;
+            background: var(--surface);
+            box-shadow: 0 26px 60px rgba(15, 23, 42, 0.16);
+            cursor: ew-resize;
+            touch-action: pan-y;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: var(--pos);
+            width: 4px;
+            margin-left: -2px;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 0 18px rgba(0, 0, 0, 0.25);
+            pointer-events: none;
+        }
+        .ba-knob {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 56px;
+            height: 56px;
+            margin: -28px 0 0 -28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #ffffff;
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease;
+        }
+        .ba-knob svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+        .ba.is-dragging .ba-knob { transform: scale(1.1); }
+        .ba:focus-within .ba-knob { outline: 3px solid var(--primary); outline-offset: 3px; }
+        .ba-label {
+            position: absolute;
+            top: 18px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: rgba(10, 17, 40, 0.72);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            backdrop-filter: blur(6px);
+            pointer-events: none;
+        }
+        .ba-label-before { left: 18px; }
+        .ba-label-after { right: 18px; background: rgba(0, 102, 255, 0.85); }
+        .ba-range { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
+        .ba-note { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 14px; }
+        @media (max-width: 768px) {
+            .ba { border-radius: 16px; }
+            .ba-knob { width: 48px; height: 48px; margin: -24px 0 0 -24px; }
+            .ba-label { top: 12px; font-size: 13px; padding: 6px 12px; }
+            .ba-label-before { left: 12px; }
+            .ba-label-after { right: 12px; }
+        }
+
         /* PRIX */
         .pricing { background: linear-gradient(135deg, var(--surface) 0%, rgba(0, 102, 255, 0.05) 100%); }
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; align-items: stretch; }
@@ -1234,6 +1309,24 @@
             </div>
         </section>
 
+        <section class="before-after" id="avant-apres">
+            <div class="container">
+                <h2>Avant / après</h2>
+                <p class="ba-intro">Faites glisser la barre pour voir la différence.</p>
+                <div class="ba" id="baSlider">
+                    <img class="ba-img ba-after" src="images/avant-apres/siege-propre.webp" srcset="images/avant-apres/siege-propre-800.webp 800w, images/avant-apres/siege-propre.webp 1600w" sizes="(max-width: 900px) 100vw, 840px" alt="Siège de voiture après le nettoyage intérieur" width="1600" height="1200" loading="lazy" decoding="async">
+                    <img class="ba-img ba-before" src="images/avant-apres/siege-sale.webp" srcset="images/avant-apres/siege-sale-800.webp 800w, images/avant-apres/siege-sale.webp 1600w" sizes="(max-width: 900px) 100vw, 840px" alt="Siège de voiture avant le nettoyage intérieur" width="1600" height="1200" loading="lazy" decoding="async">
+                    <span class="ba-label ba-label-before">Avant</span>
+                    <span class="ba-label ba-label-after">Après</span>
+                    <div class="ba-handle" aria-hidden="true">
+                        <span class="ba-knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+                    </div>
+                    <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparer le siège avant et après le nettoyage">
+                </div>
+                <p class="ba-note">Illustration</p>
+            </div>
+        </section>
+
         <section class="pricing" id="tarifs">
             <div class="container">
                 <h2>Nos formules</h2>
@@ -1666,6 +1759,66 @@
                 }
             });
         });
+
+        /* Curseur avant / après */
+        (function () {
+            const slider = document.getElementById('baSlider');
+            if (!slider) return;
+            const range = slider.querySelector('.ba-range');
+            let dragging = false;
+            let touched = false;
+
+            function setPos(percent) {
+                const value = Math.max(0, Math.min(100, percent));
+                slider.style.setProperty('--pos', value + '%');
+                range.value = Math.round(value);
+            }
+
+            function fromEvent(event) {
+                const rect = slider.getBoundingClientRect();
+                setPos(((event.clientX - rect.left) / rect.width) * 100);
+            }
+
+            slider.addEventListener('pointerdown', event => {
+                dragging = true;
+                touched = true;
+                slider.classList.add('is-dragging');
+                slider.setPointerCapture(event.pointerId);
+                fromEvent(event);
+            });
+            slider.addEventListener('pointermove', event => { if (dragging) fromEvent(event); });
+            ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(type => {
+                slider.addEventListener(type, () => { dragging = false; slider.classList.remove('is-dragging'); });
+            });
+            range.addEventListener('input', () => { touched = true; setPos(Number(range.value)); });
+
+            /* Petite démonstration la première fois que le curseur apparaît */
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+            const hint = new IntersectionObserver(entries => {
+                if (!entries[0].isIntersecting) return;
+                hint.disconnect();
+                const keys = [[0, 50], [700, 22], [1500, 78], [2200, 50]];
+                const start = performance.now() + 300;
+                const ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+                function step(now) {
+                    if (touched) return;
+                    const t = now - start;
+                    if (t < 0) { requestAnimationFrame(step); return; }
+                    for (let i = 1; i < keys.length; i++) {
+                        if (t <= keys[i][0]) {
+                            const [t0, p0] = keys[i - 1];
+                            const [t1, p1] = keys[i];
+                            setPos(p0 + (p1 - p0) * ease((t - t0) / (t1 - t0)));
+                            requestAnimationFrame(step);
+                            return;
+                        }
+                    }
+                    setPos(50);
+                }
+                requestAnimationFrame(step);
+            }, { threshold: 0.5 });
+            hint.observe(slider);
+        })();
 
         /* Scroll reveal */
         const revealGroups = [
